@@ -29,7 +29,7 @@ print(x[3])
 
 #Keep in mind that the characters in a string start at value 0.
 #If I wanted to call the letter 'C', I would have to call the
-#2nd character.
+#2nd index.
 print(x[2])
 
 #To print only a section of the string, you use a colon to seperate
