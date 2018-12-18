@@ -81,7 +81,7 @@ of letters and characters
 
 -that's all for this lesson, make sure to play around with your own programs and learn a little on your own
 
-*outro or something, lol*
+- Make sure to SMASH that thumbs up button, leave a comment down below and subscribe for more coding content. Roboman out.
 
 
 """
