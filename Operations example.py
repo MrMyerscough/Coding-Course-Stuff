@@ -22,10 +22,11 @@ print(2*2+8)
 
 print(2*(2+8))
 
-# Rounding an answer
+# Casting an answer
 
 print(9/7)
 print(int(9/7))
+print(round(13/7))
 
 # Operations with variables
 
@@ -36,7 +37,37 @@ print(x*y)
 s = 6
 perimeter = 4*s
 area = s**2
-print("The perimeter of your square is " + str(perimeter) + " and the area of your square is " + str(area))
+print("The perimeter of your square is", perimeter, "and the area of your square is", area)
+
+# Logical Operators
+age = 60
+isOld = age > 50
+print(isOld)
+
+age = 12
+isOld = age > 50
+print(isOld)
+
+isYoung = not isOld
+print(isYoung)
+
+name = "Mr. Myerscough"
+isMrMyerscough = name == "Mr. Myerscough"
+print(isMrMyerscough)
+
+isMrMyerscough = name != "Mr. Myerscough"
+print(isMrMyerscough)
+
+number = 5
+isFive = number == 5
+print(isFive)
+
+print(isMrMyerscough and isOld)
+print(isMrMyerscough or isOld)
+print(isMrMyerscough and isOld and isFive)
+print(isOld or not isFive)
+
+print(False or not True and True or False and not True)
 
 """ Video points
 

@@ -19,11 +19,16 @@ print(type(variable))
 
 # Ways to name variables
 variable = 1
-my_variable = 3
+myVariable = 3
 
 # Variable storage errors
 1 = var
 my variable = 3
+
+# Manipulating variables
+variable = 1
+variable = 2
+variable = variable + 4
 
 # Print operation example
 x = 5
@@ -32,10 +37,14 @@ print(x+y)
 
 # Print str with int example
 
-x = "I am "
+x = "I am"
 y = 16
-z = " years old."
-print(x + str(y) + z)
+z = "years old."
+print(x + " " + str(y) + " " + z)
+print(x, y, z)
+
+# Input
+
 
 """ Video Points
 
@@ -43,9 +52,9 @@ print(x + str(y) + z)
 
 - Variables are one of the most useful tools a programmer has.
 
-- There are three main things you can do with variables: define, assign, and (I forget what you said)
+- There are three main things you can do with variables: define, assign, manipulate
 
-- The four main types of variables are int, float, string, and bool.
+- The four basic types of variables are int, float, string, and bool.
 
 - Int stands for integer, and works with whole number values that can be used in computations
 
@@ -70,23 +79,3 @@ with other type strings. To fix this error it will give you, cast the int as typ
 - Make sure to SMASH that thumbs up button, leave a comment down below and subscribe for more coding content. Roboman out.
 
 """
-
-# Maybe take this part out?
-x = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-print(x[3])
-
-#Keep in mind that the characters in a string start at value 0.
-#If I wanted to call the letter 'C', I would have to call the
-#2nd index.
-print(x[2])
-
-#To print only a section of the string, you use a colon to seperate
-#the range of string you want repeated. Below is letters H-P
-print(x[7:16])
-
-#If I want to print from K through the end, it looks like this
-print(x[10:])
-
-#You can also make it print the same message multiple times!
-z = "*Knock*"
-print(z*3)
