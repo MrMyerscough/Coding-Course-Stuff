@@ -37,7 +37,7 @@ to do the same thing
 - This creates cleaner, easier to read code, and makes less work than copying and pasting code multiple times. If you find yourself
 copying and pasting, try to see if the code can fit into a loop to stop repeated lines of code.
 
-- There are two kinds of loops: for and while. We will learn about while loops in the next lesson.
+- There are two kinds of loops: for and while. We already learned about while loops in the last lesson.
 
 - For loops are used if you want to repeat a block of code a set number of times. Let's print something five times. (Do example.)
 

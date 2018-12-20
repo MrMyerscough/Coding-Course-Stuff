@@ -52,7 +52,8 @@ while True:
 
 - Intro
 
-- While loops are also a way to repeat blocks of code. While loops use a condition to tell it when to stop.
+- While loops are a way to repeat blocks of code. For loops are the other type of loop
+that we will learn about in the next lesson. While loops use a condition to tell it when to stop.
 
 - Here, we'll set out variable condition to 0. Notice how our while loop doesn't use a variable like our for loop did. This means the loop
 does NOT automatically increase the value of our variable every time. This is something we have to change in the code inside our loop.

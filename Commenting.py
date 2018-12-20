@@ -1,41 +1,41 @@
 """Mr. Myerscough's commenting example:
 This will show you how to write comments in python, and how to
-properly comment your code.
+properly comment your code."""
 
-Commenting in code is very important. Each person codes with a 
-different style, just like how different people write with 
-different styles. This can make reading someone elses code 
-very confusing. To remedy this, we comment our code so someone else
-can tell why you coded things the way you did."""
+# This is a single line comment for short blocks of code.
 
-#To write a single line comment, you use the "#" symbol. If you did
-#it correctly, the text should be green. 
-#Notice that I have to write the "#" before each line.
-#Single line comments should be used for small blocks of code.
+# I assign my_variable a value to use later
+my_variable = 5
 
-#This line prints a message to the user
-print("Welcome to Intro to Programming!")
+'''This is a multi line comment
+I can put things on multiple lines and they are all enclosed in the comment.'''
 
-#To write a multi-line comment, you use three quotation marks in
-#a row. An example is the intro comment to this program.
-#If you did it correctly, your text should turn orange.
+"""This program will print a nice message to the user. 
+I made this to be nice to whoever reads this."""
 
-"""In a multi-line comment, anything I write will be included
-in this comment. It doesn't matter if I put spaces in between
+print("Hey! I hope you have a great day today! :)")
 
-L
-I
-K
-E
+""" Video Notes
 
-T
-H
-I
-S
+- Intro
 
-All of it ends up being in the comment. This type of comment is
-used at the beginning of code to explain what the entire program
-does, and can be used before very large blocks of code or 
-fuctions to explain what they do overall. Your code should always
-start with a multi-line comment to explain what it does. To end
-a multi-line comment, you put three more quotation marks."""
+- Commenting in code is one of the most important pieces of your code. These are notes enclosed in a special symbol that python overlooks
+when running your code. Anything you write will not be run.
+
+- Coding is like writing a paper or a novel: Each person writes with a different style and uses different syntax. Without comments,
+someone else may not be able to understand your code.
+
+- Proper commenting is important, and we'll go through some guidelines.
+
+- Single line comments are written using the #. If you did this correctly, the text will turn green. This is for a short comment,
+used for a small section of code or a short description (Example)
+
+- Multi line comments are written using three quotation marks or three apostrophes in a row, and closed the same way. If you use
+quotation marks to open it, make sure you also use quotation marks to close it. (Example)
+
+- Multi line comments are used to explain a large block of code, or an entire program. These can be multiple lines long, as the name
+suggests. A comment should be at the beginning of each of your programs that explains the program and what it does. 
+
+- Make sure to SMASH that thumbs up button, leave a comment down below and subscribe for more coding content. Roboman out.
+
+"""

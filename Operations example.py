@@ -55,6 +55,8 @@ name = "Mr. Myerscough"
 isMrMyerscough = name == "Mr. Myerscough"
 print(isMrMyerscough)
 
+print(type(name)==type(age))
+
 isMrMyerscough = name != "Mr. Myerscough"
 print(isMrMyerscough)
 
@@ -77,6 +79,8 @@ print(False or not True and True or False and not True)
 Division defaults to type float
 
 - Order of operations
+
+- Any expression is calculated before the command is run. For example, 9+3 is calculated before being printed.
 
 - Rounding answers from an operation
 

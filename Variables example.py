@@ -40,11 +40,9 @@ print(x+y)
 x = "I am"
 y = 16
 z = "years old."
+print(x + y + z)
 print(x + " " + str(y) + " " + z)
 print(x, y, z)
-
-# Input
-
 
 """ Video Points
 
@@ -52,9 +50,11 @@ print(x, y, z)
 
 - Variables are one of the most useful tools a programmer has.
 
-- There are three main things you can do with variables: define, assign, manipulate
+- There are three main things you can do with variables: define, assign, recall
 
 - The four basic types of variables are int, float, string, and bool.
+
+- To check the type of a variable, you can use the type command. Invoke it with parenthesis and enter your variable as a parameter.
 
 - Int stands for integer, and works with whole number values that can be used in computations
 
@@ -72,9 +72,7 @@ which we will learn about in a later lesson
 - You can also print the result of an operation on two variables (show print(x+y))
 
 - Be careful if you are trying to print a string and an int at the same time. Python only lets you print type string
-with other type strings. To fix this error it will give you, cast the int as type str to let it be printed (show this)
-
-- Maybe something else?
+with other type strings. (Show that). To fix this error it will give you, cast the int as type str to let it be printed (show this)
 
 - Make sure to SMASH that thumbs up button, leave a comment down below and subscribe for more coding content. Roboman out.
 
