@@ -51,6 +51,9 @@ else:
 
 - Intro
 
+- So far, all programs have been pretty straightforward, just a set of basic instructions. You can almost always tell
+what it's going to do. But how do programs make decisions?
+
 - Conditionals are used to run certain code if a specific condition is met, or skip over it if that condition is not met.
 
 - To write conditionals, we check IF something is true. IF it is true, the code below will run. If not, it will be ignored. (Example)
