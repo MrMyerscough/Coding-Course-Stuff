@@ -21,6 +21,18 @@ def octagon_perimeter():
 
 octagon_perimeter()
 
+
+grid = [
+    ["x", "o" ,"x"],
+    ["o", "x", "x"],
+    ["o", "o", "o"]
+]
+
+for i in range(3):
+    print(grid[i])
+
+
+
 # Adding to an already created list
 my_list = ["Dogs", "Cats", "Birds"]
 print(my_list)
