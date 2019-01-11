@@ -1,81 +1,21 @@
-"""Mr. Myerscough's While Loop Example:
-This program will show you how while loops work in python, and how
-to write them. While loops are used when you want to do a task, or 
-a set of tasks, continuously until some condition is not true."""
+""" Unit 3 - While Loops Example
+In this example there will be 4 different tasks to complete using while loops.
+Make sure to run your code in between each task to make sure that program is working correctly before moving on."""
 
-# While loop example
-condition=0
+# Task 1: Create a program that keeps asking the user if they like dogs until they say yes
+# Your program should use a while loops, a conditional statement, and text input
 
-while condition<5:
-    print(condition)
-    
-    condition=condition+1
 
-# Larger while loop
-condition=0
 
-while condition<100:
-    print(condition)
-    
-    condition=condition+1
+# Task 2: Create a program that counts to 27
+# Your program should use a while loop, and keep increasing the variable each time the loop runs
 
-# Truth in while loops
-condition=True
 
-while condition:
-    magic_number=5
-    
-    guess=int(input("Guess my number! "))
-    
-    if guess == magic_number:
-        print("You got it!")
-        condition=False
-    
-    else:
-        print("Guess again!")
 
-# Infinite loop example
-while True:
-    print("Is this annoying yet?")
+# Task 3: Create a menu that lets the user pick from 3 options, and only ends when the user selects the end option
+# Your program should use an infinite while loops, conditionals, and a break command when exit is entered by the user.
 
-# Break in while loops
-hello=0
 
-while True:
-    print("Hello!")
-    hello=hello+1
-    
-    if hello == 5:
-        break
 
-""" Video Script
-
-- Intro
-
-- While loops are a way to repeat blocks of code. For loops are the other type of loop
-that we will learn about in the next lesson. While loops use a condition to tell it when to stop.
-
-- Here, we'll set out variable condition to 0. Notice how our while loop doesn't use a variable like our for loop did. This means the loop
-does NOT automatically increase the value of our variable every time. This is something we have to change in the code inside our loop.
-Here, we set our condition on the while loop to be while condition is less that 5. We print what condition is, then we increase it by 1 each
-time the loop runs (Example)
-
-- Let's make a larger while loop. Instead of 5, let's make the condition 100. (Example)
-
-- While loops work by checking the truth value of the condition. This means that it takes our variable condition, and checks if it is 
-less than 5. The loop runs every time this condition returns True. If it returns False, the loop stops.
-
-- We can use truth values to help us write loops as well. Let's set condition to True. Remember that the loop runs whenever the condition
-is true. Here, it is always true, so it keeps running until the value of condition is changed to False. Let's make a game to guess my number. 
-I'll use some conditionals inside of the loop here to check if the user input matches the number I want them to guess. If they get it right,
-the value of condition is changed to false, which ends the loop. Otherwise, it keeps asking for guesses. (Example)
-
-- Be careful when using truth values in while loops. If you aren't careful, you can create an infinite loop. (Example)
-
-- If you want a loop to run indefinitely until a certain condition is met, you could use the keyword break. This keyword ends the loop 
-immediately, regardless of if it was done running or not. Here, let's make what would be an infinite loop, but we will add a conditional that
-will break the loop if a condition is met. (Example) 
-
-- Make sure to SMASH that thumbs up button, leave a comment down below and subscribe for more coding content. Roboman out.
-
-"""
+# Task 4: Do a thing
+# Your program should do a thing
