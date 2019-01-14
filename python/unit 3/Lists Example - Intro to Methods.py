@@ -1,4 +1,4 @@
-"""Unit 3 - Lists Example - Intro to methods
+"""Unit 3 - Lists - Intro to methods
 In this example there will be 6 different tasks to complete using methods that can be performed on lists.
 Make sure to run your code in between each task to make sure that program is working correctly before moving on.
 """

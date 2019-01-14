@@ -1,4 +1,4 @@
-""" Unit 2 - Conditionals Example - Population
+""" Unit 2 - Conditionals - Population
 In this example there will be 4 different tasks to complete using if/elif/else statements.
 Make sure to run your code in between each task to make sure that program is working correctly before moving on."""
 
