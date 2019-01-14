@@ -69,3 +69,13 @@ speak()
 
 # Challenge: what will the following output?
 areYouOld("Jacob", findTheSum(40, findTheSum(23, 32) ) )
+
+
+"""
+in video script mention
+-breaking big problems into smaller ones
+ -just like a list of instructions can be grouped
+  - instructions example
+-top down programming
+-bottom up programming
+"""

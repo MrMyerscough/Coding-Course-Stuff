@@ -54,6 +54,8 @@ print(x, y, z)
 
 - The four basic types of variables are int, float, string, and bool.
 
+- [explain variable types, and how they are not compatible, cause errors and stuff]
+
 - To check the type of a variable, you can use the type command. Invoke it with parenthesis and enter your variable as a parameter.
 
 - Int stands for integer, and works with whole number values that can be used in computations
