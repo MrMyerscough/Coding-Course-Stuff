@@ -35,7 +35,8 @@ print("Dro's Tricks:", dro.tricks)
 print("Astra's Tricks:", astra.tricks)
 print("Both dog's species:", dro.species)
 
-# Task 3: 
+# Task 3: Create a static method to compare the list of tricks between two different objects of type Dogs. The method should print
+# the list of tricks that the two dogs share only.
 
 
 
