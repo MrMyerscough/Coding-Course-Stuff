@@ -14,6 +14,15 @@ class Dogs:
     def add_tricks(self, trick):
         self.tricks.append(trick)
 
+    @staticmethod
+    def compareTricks(dog1, dog2):
+        common_tricks = []
+        for trick in dog1.tricks:
+            for trick2 in dog2.tricks:
+                if trick == trick2:
+                    common_tricks.append(trick)
+        return common_tricks
+
     species = "Canis Lupus Familiaris"
 
 # Task 2: Create a dog object of your own dog (or if you don't have a dog make one up). Then, use the add_tricks method to
@@ -31,13 +40,13 @@ astra.add_tricks("Sit")
 astra.add_tricks("Sit Pretty")
 astra.add_tricks("Lay Down")
 
-print("Dro's Tricks:", dro.tricks)
-print("Astra's Tricks:", astra.tricks)
-print("Both dog's species:", dro.species)
+# print("Dro's Tricks:", dro.tricks)
+# print("Astra's Tricks:", astra.tricks)
+# print("Both dog's species:", dro.species)
 
 # Task 3: 
 
-
+print(Dogs.compareTricks(dro, astra))
 
 # Task 4: 
 
