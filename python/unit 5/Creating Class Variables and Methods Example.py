@@ -2,7 +2,7 @@
 In this example there will be __ different tasks to complete by creating class variables and methods.
 Make sure to run your code in between each task to make sure that program is working correctly before moving on."""
 
-# Task 1: Create a class called "Dogs". Create an __init__ funciton that has parameter "name". Inside the __inti__ function, 
+# Task 1: Create a class called "Dogs". Create an __init__ funciton that has parameter "name". Inside the __init__ function, 
 # create an empty list called "tricks". Create a class variable called "species" that tells the scientific name for dogs. 
 # Then, create a method called "add_tricks" that adds a new trick to the tricks list.
 
@@ -40,12 +40,12 @@ astra.add_tricks("Sit")
 astra.add_tricks("Sit Pretty")
 astra.add_tricks("Lay Down")
 
-# print("Dro's Tricks:", dro.tricks)
-# print("Astra's Tricks:", astra.tricks)
-# print("Both dog's species:", dro.species)
+print("Dro's Tricks:", dro.tricks)
+print("Astra's Tricks:", astra.tricks)
+print("Both dog's species:", dro.species)
 
-# Task 3: Create a static method to compare the list of tricks between two different objects of type Dogs. The method should print
-# the list of tricks that the two dogs share only.
+# Task 3: Create a second dog object, and add tricks to that object as well. Then, create a static method to compare the 
+# list of tricks between two different objects of type Dogs. The method should print the list of tricks that the two dogs share only.
 
 print(Dogs.compareTricks(dro, astra))
 
