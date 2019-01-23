@@ -5,18 +5,26 @@ Make sure to run your code in between each task to make sure that program is wor
 // Task 1 - Create an array called greetings with at least 5 different ways to say hello. Then, output the string
 // at the second index
 
-greetings = ['Hello', 'Hi', 'What\'s up', 'Yo', 'Hey']
+let greetings = ['Hello', 'Hi', `What's up`, 'Yo', 'Hey']
 console.log(greetings[2])
 
 // Task 2 - 
 
-newGreetings = ['Bonjour', 'Hola', 'Salut', 'Guttentag', 'Hey']
-commonGreetings = []
-for(i = greetings; i < greetings[greetings.length]; i++){
-    for(x = newGreetings; x < newGreetings[newGreetings.length]; x++){
-        if(i == x){
-            commonGreetings.append(i)
+let newGreetings = ['Bonjour', 'Hola', 'Salut', 'Guttentag', 'Hey']
+let commonGreetings = []
+for(let i = 0; i < greetings.length; i++){
+    for(let x = 0; x < newGreetings.length; x++){
+        if(greetings[i] === newGreetings[x]){
+            commonGreetings.push(greetings[i])
         }
     }
 }
+
+// for(let greeting1 of greetings){
+//     for( let greeting2 of newGreetings){
+//         if(greeting1 === greeting2){
+//             console.log(greeting1)
+//         }
+//     }
+// }
 console.log(commonGreetings)
