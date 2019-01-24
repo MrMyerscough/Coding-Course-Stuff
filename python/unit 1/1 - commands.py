@@ -14,11 +14,7 @@ print      ("hello world")
 
 # ERRORS : 
 
-         print("hello world")
 
-Print("hello world")
-
-print(hello world)
 
 # other examples
 
@@ -66,6 +62,12 @@ a second print will do what you'd probably expect
 -programming languages can be very picky for how they instructions are written. for example,
 you can put as many spaces between the command name and the set of parenthesis (demo),
 but if you accidentally put a space or tab before the command name, it'll error. 
+
+         print("hello world")
+
+Print("hello world")
+
+print(hello world)
 
 -it also cares about the way you write the command name. it's case-sensitive, so if i type
 "print" with a capital "P", the program will error, because it couldn't find a command with that name
