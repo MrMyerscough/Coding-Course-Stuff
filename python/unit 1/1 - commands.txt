@@ -1,0 +1,66 @@
+today we're going to learn how to write commands in python. 
+
+commands are the most basic aspects of programs.
+
+if you remember, a program is just a list of instructions, and a command is just a specific instruction.
+
+start out by typing the command name. today we're using 'print'
+
+a set of parenthesis after the name of the command is what tells the
+program to run that command
+
+inside of the parenthesis you can give data to the command. 
+in this case I'll type some words surrounded by quotation marks.
+
+that's it! a working program. I'll test it out by saving the file
+and running it. If you have code runner installed, just right click
+and choose run. 
+
+you can see it ran down here in the terminal. 
+it printed exactly what i told it to. cool.
+
+let's go back to the program again. since we know that a program is just a **set** of instructions,
+we can type as many "prints" as we want.
+more prints will do what you'd probably expect
+
+/------------
+
+different commands take different types of data. this is called a string, which is made up 
+of letters and characters
+
+"print" will also take numbers , expressions, and other values.
+here you can see that if i put a 4 without quotations, it'll run just fine
+
+if i put in a math expression, like 5 + 7, it'll actually calculate that and then print it.
+we'll learn about operations in a different video. 
+
+!!
+
+commands can also take sets of data
+
+if i put a comma in between two values, it'll print them with a space
+
+the print command can take as many arguments as you want, and they can be different types of data, like this.
+
+we'll learn about different data types in the next video, and operations after that.
+
+-----------
+
+you'll find out that programming languages can be very picky sometimes,
+and this will cause your programs to have errors. 
+
+if you put space between the name of the command and the parenthesis, it doesn't really care.
+however, if you put spaces before and then try to run, it'll say indentation error. 
+
+if i get rid of the quotation marks, the program gets confused
+
+it also cares about the way you write the command name. it's case-sensitive, so if i type
+"print" with a capital "P", the program will error, because it couldn't find a command with that name
+
+
+
+awesome. so know we know how to write commands and give them different kinds of data.
+
+that's all for this lesson, make sure to play around with your own programs and learn a little on your own
+
+until the next video, code dog out.
