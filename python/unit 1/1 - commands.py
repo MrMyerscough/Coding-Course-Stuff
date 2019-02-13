@@ -27,6 +27,21 @@ print(True)
 print(None)
 
 
+print('hello world')
+
+print('my name is code dog')
+
+print('how are you?')
+
+print(4)
+
+print(5 + 7)
+
+print('hello', 5+7)
+
+print('i am', 10 + 6, 'years old')
+
+
 """
 video points: *NEEDS REVISION*
 
