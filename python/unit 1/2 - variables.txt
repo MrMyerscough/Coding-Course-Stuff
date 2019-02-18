@@ -27,7 +27,7 @@ my_age = 16
 
 you won't see anything, but if we run this program, that value will be stored in memory. cool! 
 
-so how do we get that value? just substitute where you would place that value in your program.
+so how do we get that value? just substitute where you would place that value in your program with the variable name.
 let's try it with a print. 
 
 my_age = 16
@@ -42,6 +42,8 @@ my_age = 16
 print("i am", my_age, "years old")
 my_age = 18
 print("after two years, i am", my_age, "years old")
+
+the third line changed the value of my_age, and you can see that here.
 
 but why do we want to use variables in the first place? well they can be used 
 to make one specific program work with lots of different types of data. let's look at an example
@@ -63,7 +65,7 @@ awesome. so now we know how to define, assign, and recall variables.
 //int
 my_age = 16
 
-there are two number types in python.
+there are two main number types in python.
 this is an integer value, which means it stores a whole number. this type is called
 'int'
 
@@ -108,7 +110,7 @@ so our programs don't crash.
 
 type(pi)
 
-put the value you want to check inside.
+put the value you want to check inside of the parenthesis.
 to see what the type command tells us, we need to print it. you can just sandwich
 it into a print command, like this.
 

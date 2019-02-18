@@ -1,0 +1,21 @@
+hey guys - quick and short video here on comments in python
+
+soon you'll be writing big programs, and they can get confusing sometimes.
+comments can help you keep track of what's going on, and it'll make your
+programs more readable for other people too.
+
+comments let you write anything you want inside of a program, but they should
+mostly be used to explain what's going on.
+
+use the number sign to signify you're writing a comment. this tells
+the program that it is *not* a command, and to ignore what comes after it.
+
+you might also want to use comments to disable a part of your code while you
+test things out. there's a handy shortcut in VS code that comments things out.
+select what you want and then use CTRL + /  or CMD + / on mac.
+
+there's also a way you can have a giant comment across many lines, but this is
+actually used for official documentation, and we'll learn about that when we
+get to functions. 
+
+okay thats all for now. code dog out.
