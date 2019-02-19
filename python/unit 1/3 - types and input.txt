@@ -135,12 +135,14 @@ comparisons and see if they end up true or false. here are a few examples.
 
 5 == 5
 4 == 5
+4 != 5
 3.2 > 1
 14 < 82.6
 13 >= 13
 32 <= 12
 'hi' == 'hi'
-"hello" === "HELLO"
+"hello" == "HELLO"
+"code" != "dog"
 "a lot of words" > "one"
 "h" < ""
 True == True
@@ -151,9 +153,70 @@ remember, we use one equal sign to define and assign variables,
 so we use two equal signs to tell python we're making a comparison.
 we can also check if something is greater than or less than.
 this means greater than or equal to and this means less than or equal to.
+you can check if strings are the same or if one is longer than the other.
 lets print these.
 
+that was pretty basic. all python did was tell us if the comparison was 
+true or false.
 
+there are also logical operators in coding. here's what they look like.
+
+not True
+not False
+
+True and True
+True and False
+False and False
+
+True or True
+True or False
+False or False
+
+the 'not' word negates, or flips, the boolean.
+true becomes false and false becomes true.
+
+the 'and' tells us if both are true and the 'or' tells us if only
+one is true. 
+
+a little confusing? hang in there. things will clear up soon.
+
+okay lastly, let's learn about the input command.
+input lets you type something into your program, so
+you don't have to change the program every time you run it.
+
+input()
+
+this command will return whatever the user types in.
+when i run this program, it'll wait for me to type something in,
+and when i hit enter, the program comes to a stop.
+
+you can give the input command a prompt to ask the user of your program.
+here's a basic example.
+
+name = input('what is your name?')
+
+print("hello there, " + name + "!")
+
+this program created a variable called 'name', waited for me to type
+something in, and then stored it inside of that variable.
+it then added that variable to make a bigger string, and printed it out.
+awesome. 
+
+
+wow. that was a lot of information. congrats. but, we still don't know 
+how to do very much in python yet. so take a breather, and in the next video, 
+we're going to look at a bunch of examples of programs that do things with 
+what we just learned.
+
+again, make sure to play around with all of these things on your own. 
+coming up with cool programs from the beginning is the mark of a 
+skilled programmer. 
+
+alright, code dog out.
+
+
+
+rico ignore this.
 -math operations
 -basic string operations
 -logical operators
