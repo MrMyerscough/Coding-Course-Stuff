@@ -1,0 +1,20 @@
+file: videos/types_and_input.py
+---
+#int 
+10
+234930
+-342
+
+#float
+-32.123
+0.0
+12.1
+
+#str
+"what's up?"
+'hi 1239)*@!29103-_%*'
+''
+
+#bool
+True
+False

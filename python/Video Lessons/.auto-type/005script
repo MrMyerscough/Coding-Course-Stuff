@@ -1,0 +1,6 @@
+file: videos/types_and_input.py
+---
+"   hello    ".strip()
+"hELLo".lower()
+"hELLo".upper()
+"my name is jack".replace('jack', 'dog')

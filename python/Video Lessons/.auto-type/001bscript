@@ -1,0 +1,11 @@
+file: videos/types_and_input.py
+---
+int('432')
+float('234.2')
+str(592)
+str(-3.2)
+str(True)
+int(True)
+int(False)
+bool(0)
+bool(1)

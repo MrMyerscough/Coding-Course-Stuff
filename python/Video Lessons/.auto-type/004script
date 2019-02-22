@@ -1,0 +1,4 @@
+file: videos/types_and_input.py
+---
+print( "hello" + " " + "person" )
+print( "hello" * 3 )

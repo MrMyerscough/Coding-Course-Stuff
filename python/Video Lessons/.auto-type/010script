@@ -1,0 +1,7 @@
+file: videos/types_and_input.py
+line: 5
+col: 34
+---
+
+
+print( "this is a sentence"[120] )

@@ -1,0 +1,5 @@
+file: videos/types_and_input.py
+---
+int("233.12")
+bool(23)
+float("hello")

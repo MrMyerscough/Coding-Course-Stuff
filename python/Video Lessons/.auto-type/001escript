@@ -1,0 +1,5 @@
+file: videos/types_and_input.py
+---
+my_age = 24
+how_old = str(my_age) + " years old"
+print(how_old)

@@ -1,0 +1,7 @@
+file: videos/types_and_input.py
+line: 4
+col: 41
+---
+
+
+str.lower("hELLo")

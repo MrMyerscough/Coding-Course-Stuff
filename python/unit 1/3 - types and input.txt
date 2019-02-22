@@ -23,6 +23,7 @@ types, what you can do with them, and the input command.
 True
 False
 
+
 so these are the main types in Python, int, float, str, and bool.
 here are a few more examples of those. these are all valid.
 these values, however, don't do much on their own.
@@ -54,14 +55,22 @@ this last one is called modulo. it's kind of the opposite of integer divison.
 instead of only returning the quotient, it only returns the remainder.
 
 
-str.capitalize(   str.format(       str.isidentifier( str.ljust(        str.rindex(       str.strip(       
-str.casefold(     str.format_map(   str.islower(      str.lower(        str.rjust(        str.swapcase(    
-str.center(       str.index(        str.isnumeric(    str.lstrip(       str.rpartition(   str.title(       
-str.count(        str.isalnum(      str.isprintable(  str.maketrans(    str.rsplit(       str.translate(   
-str.encode(       str.isalpha(      str.isspace(      str.mro(          str.rstrip(       str.upper(       
-str.endswith(     str.isascii(      str.istitle(      str.partition(    str.split(        str.zfill(       
-str.expandtabs(   str.isdecimal(    str.isupper(      str.replace(      str.splitlines(  
-str.find(         str.isdigit(      str.join(         str.rfind(        str.startswith(  
+str.capitalize(   str.format(       str.isidentifier( 
+str.ljust(        str.rindex(       str.strip(       
+str.casefold(     str.format_map(   str.islower(      
+str.lower(        str.rjust(        str.swapcase(    
+str.center(       str.index(        str.isnumeric(    
+str.lstrip(       str.rpartition(   str.title(       
+str.count(        str.isalnum(      str.isprintable(  
+str.maketrans(    str.rsplit(       str.translate(   
+str.encode(       str.isalpha(      str.isspace(      
+str.mro(          str.rstrip(       str.upper(       
+str.endswith(     str.isascii(      str.istitle(      
+str.partition(    str.split(        str.zfill(       
+str.expandtabs(   str.isdecimal(    str.isupper(      
+str.replace(      str.splitlines(   str.find(         
+str.isdigit(      str.join(         str.rfind(        
+str.startswith(  
 
 these are all the operations you can do on a string.
 as you can see, theres a lot, and you can look up what they do if you'd like,
@@ -87,7 +96,7 @@ these operations are commands built into the string data type.
 
 str.lower("hELLo")
 
-you can write them like this, and that might make a little more sense
+you can also write them like this, and that might make a little more sense
 since we learned that the values you give to a command goes inside of
 the parenthesis. 
 
@@ -122,6 +131,7 @@ actually a list of letters. every sequence starts
 from zero instead of one.
 
 ***
+len stands for length. it'll return the length of the string.
 you use these to chop up a string into pieces.
 inside of the brackets a single number will return that item in the sequence.
 two numbers with a colon between them will give you the items in between
@@ -151,6 +161,7 @@ False == True
 python will evaluate these and tell us if it is true or false.
 remember, we use one equal sign to define and assign variables,
 so we use two equal signs to tell python we're making a comparison.
+an exclamation before an equal sign checks if the two values are not equal.
 we can also check if something is greater than or less than.
 this means greater than or equal to and this means less than or equal to.
 you can check if strings are the same or if one is longer than the other.
@@ -175,10 +186,50 @@ False or False
 the 'not' word negates, or flips, the boolean.
 true becomes false and false becomes true.
 
-the 'and' tells us if both are true and the 'or' tells us if only
-one is true. 
+the 'and' tells us if both are true and the 'or' tells us if one
+or both is true.
 
 a little confusing? hang in there. things will clear up soon.
+
+you'll also have to know about casting. casting is changing a value
+from one type to another.
+
+my_age = 24
+how_old = my_age + " years old"
+print(how_old)
+
+so lets say you have a program and you want to take a number and then
+add it to a string to make a bigger string. if we try to run this program,
+it'll error out. it's telling us here that we can't add an integer and string
+together. you can only add integers to integers and strings to strings. 
+so we need to change the variable my_age to a string.
+
+int('432')
+float('234.2')
+str(592)
+str(-3.2)
+str(True)
+int(True)
+int(False)
+bool(0)
+bool(1)
+
+to cast a value, use the type you want like a command with parenthesis after it.
+you can turn numbers into strings, strings into numbers, and you can also
+cast 1s and 0s to booleans and vice versa.
+
+int("233.12")
+bool(23)
+float("hello")
+
+be careful though, because this is an easy way to introduce more errors.
+
+my_age = 24
+how_old = str(my_age) + " years old"
+print(how_old)
+
+if we go back to that program and cast the integer
+to a string, it'll run this time without problems. cool.
 
 okay lastly, let's learn about the input command.
 input lets you type something into your program, so

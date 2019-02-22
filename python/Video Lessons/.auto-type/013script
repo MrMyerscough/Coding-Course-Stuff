@@ -1,0 +1,12 @@
+file: videos/types_and_input.py
+---
+not True
+not False
+
+True and True
+True and False
+False and False
+
+True or True
+True or False
+False or False

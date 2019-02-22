@@ -1,0 +1,7 @@
+file: videos/types_and_input.py
+---
+len("hi there!")
+"hello"[4]
+"hello"[2:4]
+"this is a sentence"[5:]
+"this is a sentence"[:4]
