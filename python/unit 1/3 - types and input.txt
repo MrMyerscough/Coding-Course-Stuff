@@ -1,0 +1,225 @@
+text input AND operators?
+
+last time we learned about variables, and we slightly touched on 
+variable types. today we're going to learn a little bit more about
+types, what you can do with them, and the input command.
+
+#int 
+10
+234930
+-342
+
+#float
+-32.123
+0.0
+12.1
+
+#str
+"what's up?"
+'hi 1239)*@!29103-_%*'
+''
+
+#bool
+True
+False
+
+so these are the main types in Python, int, float, str, and bool.
+here are a few more examples of those. these are all valid.
+these values, however, don't do much on their own.
+
+that's what operators do. operators, well, preform operations. 
+let's do a little math
+
+[for these, start out by only writing the expressions, and add the prints later.]
+
+print(5 + 10.4)
+print(5.34 - 10)
+print(5.1 * 10)
+print(5 / -1.0)
+
+this is your standard add, subtract, multiply, and divide.
+use the asterisk for multiplication and a slash for division.
+if we print these, nothing too surprising happens.
+
+print(5 ** 2)
+print(5 // 2)
+print(5 % 2)
+
+these are three more operations, and they're a little more unique.
+this one is how you write an exponent in python. this means 5 squared.
+this one is called integer division or floor division. when you divide
+something, this will always return the whole number quotient, and throw 
+out the remainder if there is one.
+this last one is called modulo. it's kind of the opposite of integer divison.
+instead of only returning the quotient, it only returns the remainder.
+
+
+str.capitalize(   str.format(       str.isidentifier( str.ljust(        str.rindex(       str.strip(       
+str.casefold(     str.format_map(   str.islower(      str.lower(        str.rjust(        str.swapcase(    
+str.center(       str.index(        str.isnumeric(    str.lstrip(       str.rpartition(   str.title(       
+str.count(        str.isalnum(      str.isprintable(  str.maketrans(    str.rsplit(       str.translate(   
+str.encode(       str.isalpha(      str.isspace(      str.mro(          str.rstrip(       str.upper(       
+str.endswith(     str.isascii(      str.istitle(      str.partition(    str.split(        str.zfill(       
+str.expandtabs(   str.isdecimal(    str.isupper(      str.replace(      str.splitlines(  
+str.find(         str.isdigit(      str.join(         str.rfind(        str.startswith(  
+
+these are all the operations you can do on a string.
+as you can see, theres a lot, and you can look up what they do if you'd like,
+but we're only going to talk about a few.
+
+
+"hello" + " " + "person"
+"hello" * 3
+
+you can add strings together to make one bigger string, and you can also
+multiply strings to repeat something. subtracting and dividing strings
+will just give you errors.
+
+these are special operations. as you can see, i take a value and then
+attach a command to the end with a dot. 
+
+"   hello    ".strip()
+"hELLo".lower()
+"hELLo".upper()
+"my name is jack".replace('jack', 'dog')
+
+these operations are commands built into the string data type.
+
+str.lower("hELLo")
+
+you can write them like this, and that might make a little more sense
+since we learned that the values you give to a command goes inside of
+the parenthesis. 
+
+we put 'str' before the command because 'str' is the class where 
+the 'lower' command is stored.
+
+when we do the operation directly on the value,
+it's sort of like a short way of writing this. we'll learn more about
+how this actually works when we get to objects in a later unit. 
+
+if we print these, you'll see that 'strip' removes extra white space,
+lower turns everything to lowercase, and upper turns everything to 
+uppercase. 
+**the replace command will replace all occurrences of the 
+first parameter with the second parameter.
+
+
+#sequence operations
+
+len("hi there!")
+"hello"[4]
+"hello"[2:4]
+"this is a sentence"[5:]
+"this is a sentence"[:4]
+"this is a sentence"[120]
+
+***
+these are more operations you can do with strings. 
+well, you can actually use these on all sequence data types.
+a sequence is just a list of items, so a string is
+actually a list of letters. every sequence starts
+from zero instead of one.
+
+***
+you use these to chop up a string into pieces.
+inside of the brackets a single number will return that item in the sequence.
+two numbers with a colon between them will give you the items in between
+those indexes.
+a colon after a number will give you the item and all the others after it.
+a colon before gives you the items before it.
+
+cool. now lets move on to booleans.
+since booleans are just a truth statement, we can actually write
+comparisons and see if they end up true or false. here are a few examples.
+
+5 == 5
+4 == 5
+4 != 5
+3.2 > 1
+14 < 82.6
+13 >= 13
+32 <= 12
+'hi' == 'hi'
+"hello" == "HELLO"
+"code" != "dog"
+"a lot of words" > "one"
+"h" < ""
+True == True
+False == True
+
+python will evaluate these and tell us if it is true or false.
+remember, we use one equal sign to define and assign variables,
+so we use two equal signs to tell python we're making a comparison.
+we can also check if something is greater than or less than.
+this means greater than or equal to and this means less than or equal to.
+you can check if strings are the same or if one is longer than the other.
+lets print these.
+
+that was pretty basic. all python did was tell us if the comparison was 
+true or false.
+
+there are also logical operators in coding. here's what they look like.
+
+not True
+not False
+
+True and True
+True and False
+False and False
+
+True or True
+True or False
+False or False
+
+the 'not' word negates, or flips, the boolean.
+true becomes false and false becomes true.
+
+the 'and' tells us if both are true and the 'or' tells us if only
+one is true. 
+
+a little confusing? hang in there. things will clear up soon.
+
+okay lastly, let's learn about the input command.
+input lets you type something into your program, so
+you don't have to change the program every time you run it.
+
+input()
+
+this command will return whatever the user types in.
+when i run this program, it'll wait for me to type something in,
+and when i hit enter, the program comes to a stop.
+
+you can give the input command a prompt to ask the user of your program.
+here's a basic example.
+
+name = input('what is your name?')
+
+print("hello there, " + name + "!")
+
+this program created a variable called 'name', waited for me to type
+something in, and then stored it inside of that variable.
+it then added that variable to make a bigger string, and printed it out.
+awesome. 
+
+
+wow. that was a lot of information. congrats. but, we still don't know 
+how to do very much in python yet. so take a breather, and in the next video, 
+we're going to look at a bunch of examples of programs that do things with 
+what we just learned.
+
+again, make sure to play around with all of these things on your own. 
+coming up with cool programs from the beginning is the mark of a 
+skilled programmer. 
+
+alright, code dog out.
+
+
+
+rico ignore this.
+-math operations
+-basic string operations
+-logical operators
+-integrate operator concept with variables
+-integrate operator concept with type command
+-casting !
