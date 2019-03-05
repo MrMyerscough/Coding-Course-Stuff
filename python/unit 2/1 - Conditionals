@@ -1,0 +1,116 @@
+today we're going to learn how to let programs make decisions.
+
+a program can evaluate data, and then take a certain course of action
+depending on it's input.
+
+we do this with if statements.
+
+if statements are also called conditionals or branching statements.
+
+start with the word if and then follow that with a condition.
+the condition must be or evaluate as a boolean. 
+
+after that, follow the condition with a colon. 
+
+name = input("what is your name? ")
+
+if name == "dog":
+
+after the 'if', we can put code that will only run if the condition
+evaluates to true. 
+
+we have to indent all code we want to attach to the if statement. 
+this separates the code into a block. this way, python will know which
+code is part of the if statement, and which code is part of the program.
+
+here's an example
+
+name = input("what is your name? ")
+
+if name == "dog":
+    print("hi there dog!")
+
+print("what's up?")
+
+this program can have different outputs depending on what we type in.
+when i type in 'dog' the message on line 4 will print. 
+if i enter anything different, the condition becomes false, and 
+that code will not run. 
+
+you can see that when i type in something different here.
+
+notice, however, that line 6 will always print,
+because it's not part of the 'if'.
+
+so that's the basic if statement, but there's more functionality you can 
+give to it.
+
+let's modify this program.
+
+i want it to say something else if the name is not dog. 
+i can write another if statement like this, with the opposite
+operator, but there's actually an easier way to do this.
+
+name = input("what is your name? ")
+
+if name == "dog":
+    print("hi there dog!")
+
+if name != "dog":
+    print("who are you?")
+    print("have we met before?")
+
+print("what's up?")
+
+
+after the first block of code, i can un-indent and then write else.
+
+follow it by another colon and you can start a new block of code.
+the second block of code will run if the condition is false
+instead of true.
+
+name = input("what is your name? ")
+
+if name == "dog":
+    print("hi there dog!")
+else:
+    print("who are you?")
+    print("have we met before?")
+
+print("what's up?")
+
+let's test that.
+
+okay there's one more thing you can do with if statements. 
+
+you can add else - if blocks, so if the first condition was not
+true, you can introduce a new one. 
+
+we shorten else - if into el-if or e-lif. add your next condition
+and still follow that with a colon. remember that the first condition
+is always false by the time python checks the next elif. 
+you can use as many elif's as you want. 
+
+name = input("what is your name? ")
+
+if name == "dog":
+    print("hi there dog!")
+elif name == "bryan":
+    print('hello bry!')
+elif name == "josie":
+    print('yo josie!')
+else:
+    print("who are you?")
+    print("have we met before?")
+
+print("what's up?")
+
+now this program has 4 possible outputs. 
+let's test them all.
+
+so that's it! that's the if statement. although it may seem simple, 
+with this new tool, you can now start to make more 
+complex and useful programs. 
+
+in the next video we're going to look at a bunch of example programs
+using the if statement. that's all for now. code dog out.
