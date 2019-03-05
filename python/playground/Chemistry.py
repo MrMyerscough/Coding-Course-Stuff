@@ -169,4 +169,3 @@ class ChemGetters:
 
 # getter = ChemGetters()
 # print(f'The atomic number of Zinc is {getter.get_number_from_name("Zinc")}')
-#isaiah was here
