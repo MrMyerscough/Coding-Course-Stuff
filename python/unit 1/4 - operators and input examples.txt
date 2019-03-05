@@ -1,0 +1,16 @@
+today we're going to look at examples of some simple programs
+we can make in python. 
+
+as we learn more concepts in python, you can make cooler and 
+more complex programs, but all of the ones you can see here 
+are pretty short and plain.
+
+so this is a simple math program.
+it asks for two numbers and then tells the user the sum,
+difference, product, and quotient of the two. pretty simple.
+
+this one divides numbers but gives a fraction remainder
+instead of a decimal. it uses floor division and the modulo
+operator to get whole number quotient and the remainder.
+you can pause to take a closer look at how it works.
+
