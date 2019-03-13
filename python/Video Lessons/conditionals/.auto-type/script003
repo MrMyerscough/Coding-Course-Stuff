@@ -1,4 +1,5 @@
 file: videos/conditionals.py
 line: 4
 ---
-print("hi there dog!")
+
+print("what's up?")

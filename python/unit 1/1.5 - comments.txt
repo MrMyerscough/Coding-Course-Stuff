@@ -10,12 +10,15 @@ mostly be used to explain what's going on.
 use the number sign to signify you're writing a comment. this tells
 the program that it is *not* a command, and to ignore what comes after it.
 
+as you can see i have comments at the top telling what this program is and where it came from.
+
+
 you might also want to use comments to disable a part of your code while you
 test things out. there's a handy shortcut in VS code that comments things out.
-select what you want and then use CTRL + /  or CMD + / on mac.
+select what you want and then use CTRL + / on windows  or CMD + / on mac.
 
 there's also a way you can have a giant comment across many lines, but this is
 actually used for official documentation, and we'll learn about that when we
-get to functions. 
+get to functions and classes. 
 
 okay thats all for now. code dog out.

@@ -21,6 +21,8 @@ it printed exactly what i told it to. cool.
 
 let's go back to the program again. since we know that a program is just a **set** of instructions,
 we can type as many "prints" as we want.
+the end of the command is the end of the line. when you start a new line, you can write another command.
+
 more prints will do what you'd probably expect
 
 /------------
@@ -32,17 +34,17 @@ of letters and characters
 here you can see that if i put a 4 without quotations, it'll run just fine
 
 if i put in a math expression, like 5 + 7, it'll actually calculate that and then print it.
-we'll learn about operations in a different video. 
-
 !!
 
 commands can also take sets of data
 
 if i put a comma in between two values, it'll print them with a space
 
+an argument is a piece of data you give to a command
+
 the print command can take as many arguments as you want, and they can be different types of data, like this.
 
-we'll learn about different data types in the next video, and operations after that.
+we'll learn about different data types and operations in a later video.
 
 -----------
 
@@ -52,7 +54,7 @@ and this will cause your programs to have errors.
 if you put space between the name of the command and the parenthesis, it doesn't really care.
 however, if you put spaces before and then try to run, it'll say indentation error. 
 
-if i get rid of the quotation marks, the program gets confused
+if i get rid of the quotation marks around words, the program gets confused
 
 it also cares about the way you write the command name. it's case-sensitive, so if i type
 "print" with a capital "P", the program will error, because it couldn't find a command with that name

@@ -1,0 +1,6 @@
+file: variables.py
+line: 2
+---
+print("i am", my_age, "years old")
+my_age = 18
+print("after two years, i will be", my_age, "years old")

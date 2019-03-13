@@ -1,0 +1,27 @@
+0.2
+
+Today I'm going to show you how to install and set up visual studio code and python.
+
+So if you don't know VS Code is a great code editor, and it's where we'll be writing our python programs. It's awesome because it has a bunch of powerful tools that both beginners and advanced programmers can use. 
+
+Python is the programming language we're using for Intro to Coding. There are many different programming languages out there, but this one is pretty easy to get the hang of. 
+
+You'll need to install both of these onto your computer before you get started coding. 
+
+With a google search you should find what you're looking for. Download and install them depending on your operating system.
+
+If you're on windows, when you run the Python installer, there might be a checkbox at the bottom saying 'add python to path'. Make sure that's checked. 
+
+Okay. Once you have those installed, we need to set up VS Code. Go ahead and open it. It'll look something like this.
+
+To get python working we'll need to install a few extensions. This icon is for the marketplace. Click it and then search for python.
+
+This one, made by Microsoft, is the one we want to use. Click install. 
+
+You'll also want to have code runner. Search and install that too. It looks like this.
+
+Once those are done installing, click reload.
+
+Okay. In the menu, click view, command pallet. Type in 'python select interpreter.'
+
+Click the one with the latest version because there might be more than one. 

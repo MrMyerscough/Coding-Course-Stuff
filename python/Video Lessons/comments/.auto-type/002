@@ -1,0 +1,5 @@
+file: comments.py
+line: 15
+col: 8
+---
+this function will print the prime numbers between zero and the upper limit

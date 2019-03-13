@@ -66,7 +66,8 @@ awesome. so now we know how to define, assign, and recall variables.
 my_age = 16
 
 there are two main number types in python.
-this is an integer value, which means it stores a whole number. this type is called
+this is an integer value, which means it stores positive and negative whole numbers. 
+this type is called
 'int'
 
 //float
@@ -98,7 +99,32 @@ those are all of the types built into python.
 *the different types use different amounts of memory on your computer.
 we'll learn about the different ways
 you can manipulate those types and why you would want to use them in the next video,
-but before you go, let's learn about the type command.
+but before you go, let's learn about the input command
+
+input lets you type something into your program, so
+you don't have to change the program every time you run it.
+
+input()
+
+this command will return whatever the user types in.
+when i run this program, it'll wait for me to type something in,
+and when i hit enter, the program comes to a stop.
+
+you can give the input command a prompt to ask the user of your program.
+here's a basic example.
+
+name = input('what is your name?')
+
+print("hello there,", name, "!")
+
+this program created a variable called 'name', waited for me to type
+something in, and then stored it inside of that variable.
+it then added that variable to make a bigger string, and printed it out.
+awesome. 
+
+
+
+----------the type command.
 
 in almost all programming languages, types can cause errors if they are used incorrectly,
 like this.

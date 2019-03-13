@@ -1,0 +1,82 @@
+here's another quick video on how to use the python interpreter.
+
+so where do we start?
+
+well, for most programs we write, we just right click
+and choose run, thanks to the code runner extension. 
+but what does that actually do? if you take a closer
+look at what's going on in the terminal, what's really
+happening is code runner takes your code file and
+puts the word 'python' before it. 
+
+so, in order to run a python program, you just type 
+'python' and then the name of the file. code runner
+is really just a shortcut. 
+
+if you didn't know, python is a language that is interpreted, which
+means your code is read and executed in steps. 
+
+this works through an interpreter. what's cool is that 
+we can start the interpreter in interactive mode, and
+run programs one instruction at a time!
+
+***
+to start the interpreter, just type 'python' into the 
+terminal. and if you didn't know, the terminal in VS
+code is actually just an integrated form of the 
+MacOs terminal or windows command prompt.
+
+when you type in python and hit enter, you'll see some
+information about it. here it says python 2.7, which
+is actually not what we want. Macs come with python
+installed, but its an older version. if you installed
+python 3, you'll have to type in 'python3'. 
+
+on windows computers, this shouldn't be a problem.
+just make sure that when you run python, it says version
+3.7 or higher. 
+
+okay now we're in the interpreter, and it's waiting for
+us to give it an instruction. the three greater than signs
+make up a prompt. 
+
+let's try typing a print. 
+since it's running commands one at a time, it prints 'hi'
+right after i hit enter.
+
+print('hi')
+
+in fact, when you're in interactive mode, you don't even need
+to type print! the interpreter will just give you whatever
+the output is.
+
+'hi'
+
+you can run pretty much any python instruction here. 
+i can set a variable like this, and then recall it in the
+next prompt. it'll retain it because the program hasn't come
+to a stop yet, remember?
+
+age = 20
+
+age
+
+the interpreter can be nice if you want to experiment 
+with a certain command, because you don't have to write
+an entirely new file. 
+
+age = age + 20
+
+age
+
+okay, we'll use the interpreter in the next video as we
+learn about operations. 
+
+to close out of the interpreter you can use the quit command.
+
+there are also shortcuts. on Mac control + D should 
+bring it to a stop, and on windows CTRL + z then enter
+should work. 
+
+okay! that's all for this video. 
+code dog out

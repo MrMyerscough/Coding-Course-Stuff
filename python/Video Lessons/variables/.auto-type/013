@@ -1,0 +1,6 @@
+file: variables.py
+line: 1
+col: 12
+---
+
+print(my_age)

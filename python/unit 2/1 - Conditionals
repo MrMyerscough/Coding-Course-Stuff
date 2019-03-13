@@ -20,6 +20,7 @@ after the 'if', we can put code that will only run if the condition
 evaluates to true. 
 
 we have to indent all code we want to attach to the if statement. 
+pressing tab should insert four spaces.
 this separates the code into a block. this way, python will know which
 code is part of the if statement, and which code is part of the program.
 
@@ -96,9 +97,9 @@ name = input("what is your name? ")
 if name == "dog":
     print("hi there dog!")
 elif name == "bryan":
-    print('hello bry!')
+    print("hello bry!")
 elif name == "josie":
-    print('yo josie!')
+    print("yo josie!")
 else:
     print("who are you?")
     print("have we met before?")
@@ -107,6 +108,11 @@ print("what's up?")
 
 now this program has 4 possible outputs. 
 let's test them all.
+
+as you can see, there's a lot of different ways you can 
+configure if statements. for example, you can leave out 
+the 'else' part in this program, and nothing will run 
+if both conditions are false. the program will just move on.
 
 so that's it! that's the if statement. although it may seem simple, 
 with this new tool, you can now start to make more 

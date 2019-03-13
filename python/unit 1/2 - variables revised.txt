@@ -1,0 +1,149 @@
+today we're going to learn about variables, the different types
+in python, and the input command.
+
+
+let's first learn about types.
+all values in python have a specific type. 
+
+there are two number types in python. the first is int.
+short for integer.
+an integer is a positive or negative whole number. 
+these are a few examples.
+
+12
+-34
+1295473
+-325
+
+when you need to hold decimals, you use float.
+float is short for floating point number.
+these numbers can be as big or small as you want.
+you can even use scientific notation.
+
+0.0
+12.4
+-4.2352937403204
+3.4e-10
+
+str means string. we used this in the last video. strings hold text, so
+letters, characters, and numbers. the quotes signify the beginning 
+and end of the string, and you can use single or double quotes. 
+here i used double quotes because i used an apostrophe inside. 
+
+"hey guys!"
+'$12 is 33.3% of your total'
+"what's up?"
+
+bool is for boolean. it holds a truth value, so either true or false.
+type those with capital first letters. we'll learn how to properly use
+booleans later on.
+
+True
+False
+
+There's also this special type that holds complex numbers,
+but we won't use this in the Intro to Coding course. 
+
+4+3j
+
+
+those are all of the types built into python. 
+*the different types use different amounts of memory on your computer.
+we'll learn about the different ways
+you can manipulate those types and why you would want to use them in the next video
+
+for now, let's learn about variables.
+
+variables are the next basic part of programs that we'll need to learn
+
+variables, just like in math, store values in a program. any value.
+
+in every computer, there's a place called the memory, or RAM. 
+
+*when you store things in a program, they're stored in your computer's memory
+and they'll stay there until your program comes to a stop or your computer turns off
+
+*there are three main things you can do with variables: define, assign, and recall
+
+*you define a variable by first typing the name you want to give it
+
+by python convention, variables are named after what they hold, are written in lowercase,
+and use underscores instead of spaces. in general, don't use numbers or 
+special characters either.
+
+after typing the name, put an equals sign after it, and then the value you want to store.
+
+my_age = 16
+
+you won't see anything, but if we run this program, that value will be stored in memory. cool! 
+
+so how do we get that value? 
+just substitute where you would place that value in your program with the variable name.
+let's try it with a print. 
+
+my_age = 16
+print(age)
+
+as you can see, the variable was stored, and then recalled from memory.
+
+down the line, you might want to change the value of a certain variable,
+and that looks exactly like defining one.
+
+my_age = 16
+print("i am", my_age, "years old")
+my_age = 18
+print("after two years, i am", my_age, "years old")
+
+the third line changed the value of my_age, and you can see that here.
+
+but why do we want to use variables in the first place? well they can be used 
+to make one specific program work with lots of different types of data. let's look at an example
+
+my_age = 16
+my_age = my_age + 10
+print("i will be", my_age, "after 10 years")
+my_age = my_age + 20
+print("i will be", my_age, "after 30 years")
+
+*we haven't learned about operations yet, but you can probably guess what this does.
+it takes the stored value, adds a number to it, and then stores that back in the memory.
+as a result, the starting number is increased by 10. 
+
+if i change 16 to 30 and run the program again,
+the entire output changes, and i only had to change one value.
+
+awesome. so now we know how to define, assign, and recall variables. 
+
+let's finish up with the input command.
+
+input lets you type something into your program, so
+you don't have to change the program every time you run it.
+
+input()
+
+this command will return whatever the user types in, and it'll always 
+be a string. 
+when i run this program, it'll wait for me to type something in,
+and when i hit enter, the program comes to a stop.
+
+
+you can also give the input command a prompt to ask the user of your program.
+here's a basic example.
+
+name = input('what is your name?')
+
+print("hello there, " + name + "!")
+
+this program created a variable called 'name', waited for me to type
+something in, and then stored it inside of that variable.
+it then added that string to make a bigger string, and printed it out.
+awesome. 
+
+this command will help us out a lot when writing new programs. 
+
+so go ahead and try it out for yourself, and play around with variables too.
+
+in the next video, we'll learn about operations you can do on values,
+and a little more about types.
+
+alightie, code dog out. 
