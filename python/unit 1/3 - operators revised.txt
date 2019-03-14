@@ -1,0 +1,273 @@
+-operators
+-casting
+-type command
+
+last time, we learned about the different types in python, variables,
+and the input command.
+
+today we're going to learn about what you can do with different values.
+
+we're also doing this lesson in the Python interpreter, so if you 
+haven't watched the last video, go ahead and do that now. 
+
+let's start with operators. 
+operators manipulate values. let's do some math. 
+
+this is how you add, subtract, multiply, and divide.
+use the asterisk for multiplication and a slash for division.
+
+>>> 4 + 12.8
+
+>>> 18 - 64
+
+>>> 45 * 1.33
+
+>>> 12 / 3
+
+those were pretty standard. here's three that are a little more unique.
+
+this one is how you write an exponent in python. this means 5 squared.
+this one is called integer division or floor division. when you divide
+something, this will always return the whole number quotient, and throw 
+out the remainder if there is one.
+this last one is called modulo. it's kind of the opposite of integer division.
+instead of only returning the quotient, it only returns the remainder.
+
+>>> 5 ** 2
+
+>>> 5 // 2
+
+>>> 5 % 2
+
+these are all the operations you can do on a string.
+as you can see, theres a lot, and you can look up what they do if you'd like,
+but we're only going to talk about a few.
+
+(to auto-complete in the Interpreter, hit tab. to see all options, hit tab twice.)
+
+str. >>
+
+you can add strings together to make one bigger string, and you can also
+multiply strings to repeat something. subtracting and dividing strings
+will just give you errors.
+
+>>> "hello" + " " + "person"
+
+>>> "hello" * 3
+
+these are special operations. as you can see, i take a value and then
+attach a command to the end with a dot. 
+
+>>> "    hello  ".strip()
+
+>>> "hELLo".lower()
+
+>>> "hELLo".upper()
+
+>>> "my name is jack".replace('jack', 'dog')
+
+these operations are commands built into the string data type.
+
+str.lower("hELLo")
+
+you can also write them like this, where the string is given to
+the command, and that might make a little more sense
+since we learned that the values you give to a command goes inside of
+the parenthesis. 
+
+we put 'str' before the command because 'str' is the class where 
+the 'lower' command is stored.
+
+when we do the operation directly on the value,
+it's sort of like a short way of writing this. we'll learn more about
+how this actually works when we get to objects in a later unit.
+
+you can see that 'strip' removes extra white space,
+lower turns everything to lowercase, and upper turns everything to 
+uppercase. 
+**the replace command will replace all occurrences of the 
+first parameter with the second parameter.
+
+
+>>> len("hi there!")
+
+>>> "hello"[4]
+
+>>> "hello"[2:4]
+
+>>> "this is a sentence"[5:]
+
+>>> "this is a sentence"[:4]
+
+>>> "this is a sentence"[120]
+
+these are more operations you can do with strings. 
+well, you can actually use these on all sequence data types.
+a sequence is just a list of items, so a string is
+actually a list of letters. every sequence starts
+from zero instead of one.
+
+len stands for length. it'll return the length of the string.
+you use these to chop up a string into pieces.
+inside of the brackets a single number will return that item in the sequence.
+two numbers with a colon between them will give you the items in between
+those indexes.
+a colon after a number will give you the item and all the others after it.
+a colon before gives you the items before it.
+
+cool. now lets move on to booleans.
+since booleans are just a truth statement, we can actually write
+comparisons and see if they end up true or false. here are a few examples.
+
+
+>>> 5 == 5
+
+>>> 4 == 5
+
+>>> 4 != 5
+
+>>> 3.2 > 1
+
+>>> 14 < 82.6
+
+>>> 13 >= 13
+
+>>> 32 <= 12
+
+>>> 'hi' == 'hi'
+
+>>> "hello" == "HELLO"
+
+>>> "code" != "dog"
+
+>>> "a lot of words" > "one"
+
+>>> "h" < ""
+
+>>> True == True
+
+>>> False == True
+
+python will evaluate these and tell us if it is true or false.
+remember, we use one equal sign to define and assign variables.
+that's why we use two equal signs, to tell python we're making a comparison.
+an exclamation before an equal sign checks if the two values are not equal.
+we can also check if something is greater than or less than.
+this means greater than or equal to and this means less than or equal to.
+you can also check if strings are the same or if one is longer than the other.
+
+that was pretty basic. all python did was tell us if the comparison was 
+true or false.
+
+there are also logical operators in coding. here's what they look like.
+
+
+>>> not True
+
+>>> not False
+
+>>> True and True
+>>> True and False
+>>> False and False
+
+>>> True or True
+>>> True or False
+>>> False or False
+
+the 'not' word negates, or flips, the boolean.
+true becomes false and false becomes true.
+
+the 'and' tells us if both are true and the 'or' tells us if one
+or both is true.
+
+a little confusing? hang in there. things will clear up soon.
+
+okay, so we know python has a few different types, and they hold 
+different values. in almost all programming languages, types can 
+cause errors if they are used incorrectly, like this.
+
+True + "hello"
+
+the type command will tell you what type a variable is, and we can use this later on
+so our programs don't crash. 
+
+>>> pi = 3.14
+ 
+>>> type(pi)
+
+>>> type('a string')
+
+>>> type(True)
+
+put the value you want to check inside of the parenthesis.
+
+you can see here it prints class float, which tells us it's a floating point number.
+
+you can also combine the type command with the keyword 'is' like this
+
+>>> type(pi) is float
+>>> type(pi) is str
+
+it says True and then False, so it IS of type float but NOT of type string.
+
+so, yeah, using types incorrectly can cause errors, but what
+do you do to fix that?
+
+the answer is casting. casting is changing a value
+from one type to another.
+
+my_age = 24
+my_age + " years old"
+
+so lets say you have a program and you want to take a number and then
+add it to a string to make a bigger string. if we try to run this,
+it'll error out. it's telling us here that we can't add an integer and string
+together. you can only add integers to integers and strings to strings. 
+so we need to change the variable my_age to a string.
+
+>>> int('432')
+>>> float('234.2')
+>>> str(592)
+>>> str(-3.2)
+>>> str(True)
+>>> int(True)
+>>> int(False)
+>>> bool(0)
+>>> bool(1)
+
+to cast a value, use the type you want like a command with parenthesis after it.
+you can turn numbers into strings, strings into numbers, and you can also
+cast 1s and 0s to booleans and vice versa.
+
+int("233.12")
+bool(23)
+float("hello")
+
+be careful though, because this is an easy way to introduce more errors.
+
+my_age = 24
+str(my_age) + " years old"
+
+okay let's go back to that first example. 
+if we cast the integer
+to a string, it'll run this time without problems. cool.
+
+
+wow. that was a lot of information. congrats. but, we still don't know 
+how to do very much in python yet. 
+
+in the next video, 
+we're going to look at a bunch of examples of programs with 
+what we just learned.
+
+soon enough, we'll be making cool programs
+that actually do things, so just stick through the first few boring parts, and i 
+promise, coding can get pretty fun.
+
+again, make sure to play around with all of these things on your own. 
+coming up with cool programs from the beginning is the mark of a 
+skilled programmer. 
+
+alright, that's all for this video. 
+
+see ya. code dog out.
