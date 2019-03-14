@@ -22,7 +22,7 @@ run programs one instruction at a time!
 
 ***
 to start the interpreter, just type 'python' into the 
-terminal. and if you didn't know, the terminal in VS
+terminal. the terminal in VS
 code is actually just an integrated form of the 
 MacOs terminal or windows command prompt.
 
