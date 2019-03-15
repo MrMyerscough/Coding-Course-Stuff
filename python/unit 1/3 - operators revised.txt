@@ -30,7 +30,7 @@ this one is how you write an exponent in python. this means 5 squared.
 this one is called integer division or floor division. when you divide
 something, this will always return the whole number quotient, and throw 
 out the remainder if there is one.
-this last one is called modulo. it's kind of the opposite of integer division.
+this last one is called modulo. it's kind of the opposite of floor division.
 instead of only returning the quotient, it only returns the remainder.
 
 >>> 5 ** 2
@@ -75,7 +75,7 @@ the command, and that might make a little more sense
 since we learned that the values you give to a command goes inside of
 the parenthesis. 
 
-we put 'str' before the command because 'str' is the class where 
+we put 'str' before the command because it's the class where 
 the 'lower' command is stored.
 
 when we do the operation directly on the value,
@@ -107,6 +107,8 @@ a sequence is just a list of items, so a string is
 actually a list of letters. every sequence starts
 from zero instead of one.
 
+we'll learn more about sequences when we get to lists.
+
 len stands for length. it'll return the length of the string.
 you use these to chop up a string into pieces.
 inside of the brackets a single number will return that item in the sequence.
@@ -114,6 +116,9 @@ two numbers with a colon between them will give you the items in between
 those indexes.
 a colon after a number will give you the item and all the others after it.
 a colon before gives you the items before it.
+
+dont try to get an item outside of the sequence range, because that
+will cause an error.
 
 cool. now lets move on to booleans.
 since booleans are just a truth statement, we can actually write
@@ -140,9 +145,9 @@ comparisons and see if they end up true or false. here are a few examples.
 
 >>> "code" != "dog"
 
->>> "a lot of words" > "one"
+>>> "apple" > "banana"
 
->>> "h" < ""
+>>> "cow" > "apple"
 
 >>> True == True
 
@@ -154,7 +159,8 @@ that's why we use two equal signs, to tell python we're making a comparison.
 an exclamation before an equal sign checks if the two values are not equal.
 we can also check if something is greater than or less than.
 this means greater than or equal to and this means less than or equal to.
-you can also check if strings are the same or if one is longer than the other.
+you can also check if strings are the same or if one comes after another 
+in lexicographic order
 
 that was pretty basic. all python did was tell us if the comparison was 
 true or false.
@@ -237,7 +243,7 @@ so we need to change the variable my_age to a string.
 
 to cast a value, use the type you want like a command with parenthesis after it.
 you can turn numbers into strings, strings into numbers, and you can also
-cast 1s and 0s to booleans and vice versa.
+cast 1s and 0s to booleans and booleans into ones and zeross
 
 int("233.12")
 bool(23)
@@ -250,7 +256,7 @@ str(my_age) + " years old"
 
 okay let's go back to that first example. 
 if we cast the integer
-to a string, it'll run this time without problems. cool.
+to a string, it'll run this time without problems. woo.
 
 
 wow. that was a lot of information. congrats. but, we still don't know 
