@@ -1,0 +1,163 @@
+-math
+-even / odd
+-fraction
+-Pythagorean
+-quadratic
+
+
+today we're going to look at examples of some simple programs
+we can make in python. 
+
+as we learn more concepts in python, you can make cooler and 
+more complex programs, but all of the ones you can see here 
+are pretty short and plain.
+
+so this is a simple math program.
+it asks for two numbers and then tells the user the sum,
+difference, product, and quotient of the two. pretty simple.
+
+notice how i cast the input to a float before i store them
+inside of variables. 
+
+whenever you're dealing with inputs and numbers, you're most 
+likely going to have to cast them so you can use math operators.
+
+if you don't, you'll get errors. I could
+have cast these to integers but then the program would crash
+if i enter in a decimal value. 
+it all just depends on the program you're trying to make.
+
+this program is only 3 lines
+it asks for a number and tells you if it's even or odd.
+it uses modulo. whenever you divide something by two, the remainder
+will either be one or zero. if the remainder is zero, it's an even number, 
+and if not, its odd. 
+
+first, the program evaluates the math expression, and then it makes a 
+comparison. after finding that it stores it inside of the variable
+'isEven' and prints it out.
+
+this one divides numbers but gives a fraction remainder
+instead of a decimal. it uses floor division and the modulo
+operator to get whole number quotient and the remainder.
+you can pause to take a closer look at how it works.
+
+on line 5 i had to cast the numbers to strings before i could
+add them to make a bigger string.
+
+--?
+sometimes, this program gives you a fraction that's un-simplified, 
+but this is the best we can get with what we know.
+
+this one is a bit more useful.
+it solves Pythagorean theorem problems, which solves
+sides of right triangles. 
+in order to solve a Pythagorean problem, you need to 
+use a square root, which we haven't learned how to do yet.
+in python, there are two ways to do square roots. 
+
+in math, taking a square root is the same as taking 
+a number and raising it to the one-half power. 
+
+so we can use the exponent operator with zero point five
+to write a square root. 
+
+the second way is using the square root command built into
+the math module. 
+
+you'll need to import math 
+and then you can do math dot s q r t. 
+
+both of these will result in 5
+
+25 ** 0.5
+
+import math
+math.sqrt(25)
+
+put your import statement at the top of the code.
+we'll learn more about imports later on.
+
+all these prints at the top of the program are just for
+looks. when you run the program it'll show a little ascii 
+image of a triangle and then ask for a value.
+
+let's test this program out. 
+here it works with a simple 3-4-5 triangle 
+and also numbers that are not as nice
+
+-order of operations !!!! 
+    -parenthesis
+
+this next one solves quadratic formula problems.
+it prints information first, then gets values from the user,
+calculates the solutions, and then prints them out.
+the thing to notice here is on these lines.
+
+when you're doing many math operations in python, they'll
+go in the order of operations, just like in a scientific calculator.
+if you're not getting the expected result, it doesn't hurt
+to group things into parenthesis to make it easier to understand.
+
+if i test out this program, it works just fine. 
+
+there are a few special operators that we haven't talked about last time.
+
+this one might seem obvious, but you can put a minus 
+sign before any number value, and it'll turn it negative.
+
+number = 12
+
+number += 5
+    number = number + 5
+number -= 10
+    number = number - 5
+number *= 2
+    number = number * 2
+number /=3
+    number = number / 3
+number **= 4
+    number = number ** 4
+number %= 2
+    number = number % 2
+number //=12
+    number = number // 12
+
+these are special assignment operators. 
+they're actually a shorthand form of these operators on the right. 
+so they just preform an operation on a variable and then
+assign the result to the variable all in one step. 
+
+there's also an easy way to incorporate variables into strings. 
+they're called f-strings; f standing for formatting. 
+just type an F before the quotes of a string, and everywhere
+you want to place a value, surround it with brackets. 
+you can place any value inside of the brackets, no casting needed.
+
+let's look at a program that uses f-strings.
+
+this is a simple contact formatting program. 
+type in unformatted information, and then it'll print
+everything out in the right way, so you could copy and
+paste it into a different program or something.
+
+f-strings will become more useful when we get to writing 
+text files in the future. 
+
+also, i used this command, on line 7, called capitalize. 
+i know, i never talked about the capitalize command. 
+but i did say that there were a bunch of operators you 
+could do on strings. so i looked at a list of them and 
+saw that capitalize was something i could use. so i used it.
+
+you can do the same thing. there's a whole lot of stuff 
+outside of what i talk about in a 5 minute video, so 
+don't hold back from exploring for yourself. 
+
+well that's all the example programs i have for this video. 
+
+i'm gonna keep saying this forever, but
+the main way to learn about this stuff is to 
+make your own programs. have fun and invent something new.
+
+code dog out.`

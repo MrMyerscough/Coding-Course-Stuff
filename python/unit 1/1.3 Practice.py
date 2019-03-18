@@ -1,9 +1,9 @@
-"""Unit 1 - Operators
-In this example there will be 5 different tasks to complete using operators.
-Make sure to run your code in between each task to make sure that program is working correctly before moving on."""
+# 1.3 - Operators and Types
+# In this practice there will be 5 different tasks to complete using operators.
+# Make sure to run your code in between each task to make sure that program is working correctly before moving on.
 
 # Task 1: Solve this problem: What is the output of the difference of (double the sum of 4 and 7) and 7, divided by 5?
-# Your program should ouput 3 if you coded it correctly.
+# Your program should output 3 if you coded it correctly.
 
 print(((2*(4+7))-7)/5)
 
