@@ -23,7 +23,7 @@ whenever you're dealing with inputs and numbers, you're most
 likely going to have to cast them so you can use math operators.
 
 if you don't, you'll get errors. I could
-have cast these to integers but then the program would crash
+have casted these to integers but then the program would crash
 if i enter in a decimal value. 
 it all just depends on the program you're trying to make.
 
@@ -144,7 +144,7 @@ paste it into a different program or something.
 f-strings will become more useful when we get to writing 
 text files in the future. 
 
-also, i used this command, on line 7, called capitalize. 
+also, i used this command, on line 9, called capitalize. 
 i know, i never talked about the capitalize command. 
 but i did say that there were a bunch of operators you 
 could do on strings. so i looked at a list of them and 
