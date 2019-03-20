@@ -3,12 +3,12 @@ today we're going to learn how to let programs make decisions.
 a program can evaluate data, and then take a certain course of action
 depending on it's input.
 
-we do this with if statements.
+we do this with the if statement.
 
 if statements are also called conditionals or branching statements.
 
 start with the word if and then follow that with a condition.
-the condition must be or evaluate as a boolean. 
+the condition must be a boolean or evaluate as one. 
 
 after that, follow the condition with a colon. 
 
@@ -22,7 +22,7 @@ evaluates to true.
 we have to indent all code we want to attach to the if statement. 
 pressing tab should insert four spaces.
 this separates the code into a block. this way, python will know which
-code is part of the if statement, and which code is part of the program.
+code is part of the if statement, and which code is the rest of the program.
 
 here's an example
 
@@ -33,7 +33,9 @@ if name == "dog":
 
 print("what's up?")
 
-this program can have different outputs depending on what we type in.
+[image fade to example?]
+
+this program can have different outputs depending on what I type in.
 when i type in 'dog' the message on line 4 will print. 
 if i enter anything different, the condition becomes false, and 
 that code will not run. 
@@ -49,8 +51,9 @@ give to it.
 let's modify this program.
 
 i want it to say something else if the name is not dog. 
+[pause to write]
 i can write another if statement like this, with the opposite
-operator, but there's actually an easier way to do this.
+operator, but there's actually a built-in way to do this.
 
 name = input("what is your name? ")
 
@@ -80,6 +83,8 @@ else:
 
 print("what's up?")
 
+[image fade to example]
+
 let's test that.
 
 okay there's one more thing you can do with if statements. 
@@ -87,10 +92,10 @@ okay there's one more thing you can do with if statements.
 you can add else - if blocks, so if the first condition was not
 true, you can introduce a new one. 
 
-we shorten else - if into el-if or e-lif. add your next condition
+we shorten else - if into el-if or e-lif. un-indent, add your next condition
 and still follow that with a colon. remember that the first condition
-is always false by the time python checks the next elif. 
-you can use as many elif's as you want. 
+is always false by the time python checks the next el-if. 
+you can use as many el-if's as you want. 
 
 name = input("what is your name? ")
 
@@ -112,11 +117,11 @@ let's test them all.
 as you can see, there's a lot of different ways you can 
 configure if statements. for example, you can leave out 
 the 'else' part in this program, and nothing will run 
-if both conditions are false. the program will just move on.
+if every condition is false. the program will just move on.
 
 so that's it! that's the if statement. although it may seem simple, 
-with this new tool, you can now start to make more 
-complex and useful programs. 
+with this new tool, you can now start to make smarter programs. 
 
 in the next video we're going to look at a bunch of example programs
-using the if statement. that's all for now. code dog out.
+using the if statement, including a few small games. 
+that's all for now. code dog out.
