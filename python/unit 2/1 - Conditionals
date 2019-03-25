@@ -9,6 +9,7 @@ if statements are also called conditionals or branching statements.
 
 start with the word if and then follow that with a condition.
 the condition must be a boolean or evaluate as one. 
+many times, you'll put a comparison here
 
 after that, follow the condition with a colon. 
 
@@ -20,6 +21,7 @@ after the 'if', we can put code that will only run if the condition
 evaluates to true. 
 
 we have to indent all code we want to attach to the if statement. 
+if VS code doesn't already indent for you, 
 pressing tab should insert four spaces.
 this separates the code into a block. this way, python will know which
 code is part of the if statement, and which code is the rest of the program.
@@ -92,9 +94,9 @@ okay there's one more thing you can do with if statements.
 you can add else - if blocks, so if the first condition was not
 true, you can introduce a new one. 
 
-we shorten else - if into el-if or e-lif. un-indent, add your next condition
+we shorten else - if into el-if or e-lif. un-indent, write el-if, add your next condition
 and still follow that with a colon. remember that the first condition
-is always false by the time python checks the next el-if. 
+is always false by the time python checks the next one. 
 you can use as many el-if's as you want. 
 
 name = input("what is your name? ")
