@@ -1,0 +1,22 @@
+print()
+
+x = 5
+x = 12
+print(x)
+string = input()
+input('prompt')
+
++ - * /
+** // %
+.strip() .upper() .lower() .replace()
+len() [4] [3:10] [8:] [:5]
+not and or
+5 == 5 4 != 5 5 > 4 4 < 5
+type() is type
+int() float() str() bool()
+.capitalize()
+f''
+
+
+if else elif
+import random

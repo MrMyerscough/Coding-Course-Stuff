@@ -7,3 +7,139 @@
 -rock paper scissors
 
 -8 ball
+
+-AND OR NOT
+
+
+now that you have an idea of how if-statements work, let's look at 
+a few practical examples of how they're used. 
+
+a pretty common way to use an if-statement is with a menu.
+tell the user what they can pick, take input, and then
+use their input in each condition of the if statement. 
+**HAR
+
+now in this program, i want the user to pick which math problem to solve.
+so in the block of each condition, i'll paste the correct code to run.
+don't forget to indent. 
+
+at the end, i have an else statement. because we can't control 
+what the user types in, if they choose something other than 1, 2,
+or 3, the else block runs and prints 'not a menu option'
+
+let's test this out.   
+
+[test it out!]
+
+that one was easy. this next one is a small game. it's like a
+digital 8-ball. in order for this program to work, the program
+has to make a random decision, but programs are simple and 
+need to follow logic. so we use random numbers,
+which you can get from the 'random' module. 
+
+import random
+random.randint(1, 5)
+
+you'll need to import it, and then you can do random.randint() 
+which will return a random integer. this command takes two 
+values. a starting value and ending value. if i give it 
+1 and 5, it'll randomly return either 1, 2, 3, 4, or 5. 
+you can see that when i try it in the interpreter. calling
+the command repeatedly will give different numbers.
+
+back to the 8-ball program, it generates a random number between 
+1 and 10, and then checks all of them in the if-statement. 
+the program will print a 'yes' answer, 'no' answer, or 
+'maybe' answer depending on the number generated. what's
+fun about this program is that you can customize what the
+responses will be. 
+
+let's ask it a few questions. 
+
+here's another program. it's an example of how you'd write
+a simple login screen. 
+
+it asks for a username and password and then it tells you
+if you've gained access or entered the login wrong. 
+
+it does this using nested conditionals. Nesting in programming
+means one thing contains a similar thing. In this case, there's 
+an if-statement inside of an if statement.
+
+here's how the logic works. 
+if the username is correct, check if the password is correct.
+if it is, then print 'access granted' but if it's not,
+they've got the username right but not the password. print that out.
+if the username was wrong check if the password was right.
+if it was, print that they have the wrong username. if its wrong,
+print that they had both wrong.
+
+nested conditionals allow you to check if there's two conditions 
+met. however, there's another, perhaps easier way to do this.
+
+remember those logical operators we learned about last unit? 
+not, and, and or? we can use those to check for more than one condition.
+
+here's how to write the same program in a different way. 
+
+we learned that 'and' evaluates to 'true' if both conditions are true.
+so in the first half we check if the username is right or wrong,
+and in the second half we check if the password. 
+
+[
+    True and True
+    True and False
+    False and True
+    False and False
+]
+
+the logic here is the same. if username and password are correct, print
+access granted. if username is correct but password is not, print
+wrong password. if username is incorrect and password is good, 
+print wrong username. if none of those conditions, both username
+and password must be incorrect. 
+
+x2 - is good
+
+there's also some functionality we can add here that can't be achieved with
+nested conditionals. the 'or' operator will return 'true' if at least
+one of the two conditions is 'true'. i can replace these two conditions
+with an or statement, and a print that says 'username OR password 
+incorrect'
+
+here's the output for this program.
+
+okay, this last one is cool. it's a game of rock-paper-scissors. 
+it looks long but it's not that difficult. 
+it takes the user's move with input, generates a random play for the
+'computer' player, and then prints the result using nested conditionals.
+
+again, the random number was created with the random.randint command. 
+i create a variable called computer_choice and then set it to either
+'rock', 'paper', or 'scissors' depending on the number. 
+
+here, where i check for the winner, i decided to use nested conditionals
+instead of using 'and' statements. i did this so i didn't have to re-write
+the first condition a bunch of times, and this way, it's a little more 
+organized. 
+
+when you need to check more than one condition, you can decide which way 
+you want to write it: nested or not. sometimes nesting will make it easier,
+and sometimes it doesn't. there are different reasons for using each, so try
+them on your own.
+
+in the bigger if-statement, i check for the user's choice. inside of that 
+i check the computer's choice. here the user and computer both chose 'rock',
+so the game ends in a draw. here, the user chose rock and the computer 
+chose paper, so the computer wins. here, the user chose rock and the
+computer didn't choose paper or rock, so it must've chose scissors, 
+meaning the user won! i did that for all of the possible combinations
+of the game. at the end i have an else-statement, meaning the user didn't 
+choose rock, paper, or scissors, so it just prints what to type in next time. 
+
+here's the game in action. 
+
+alright. those are all the examples in this video. now its your turn to make
+some fun programs. 
+
+code dog out. 
