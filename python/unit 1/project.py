@@ -11,11 +11,11 @@ u = sentence.count('u')
 
 vowels = a + e + i + o + u
 print('there are', vowels, 'vowels in your sentence')
-print(f"{a} A's - {str(a/len(sentence))[0:5]}%")
-print(f"{e} E's - {str(e/len(sentence))[0:5]}%")
-print(f"{i} I's - {str(i/len(sentence))[0:5]}%")
-print(f"{o} O's - {str(o/len(sentence))[0:5]}%")
-print(f"{u} U's - {str(u/len(sentence))[0:5]}%")
+print(f"{a} A's - {str(a/len(sentence) * 100)[0:5]}%")
+print(f"{e} E's - {str(e/len(sentence) * 100)[0:5]}%")
+print(f"{i} I's - {str(i/len(sentence) * 100)[0:5]}%")
+print(f"{o} O's - {str(o/len(sentence) * 100)[0:5]}%")
+print(f"{u} U's - {str(u/len(sentence) * 100)[0:5]}%")
 
 one = float(input('enter a number: '))
 two = float(input('enter another number: '))

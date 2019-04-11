@@ -1,0 +1,216 @@
+in this video, we'll learn about while loops. 
+
+loops in programming are really useful because they can be 
+used to save time and achieve things that were before impossible.
+
+remember, we started out writing programs made of simple commands. 
+they would start at the first command, run through them one by one,
+and be finished when they ran out. 
+
+then we introduced conditionals. our programs could then have different
+outputs and courses of actions depending on conditions. 
+
+now, with loops, we can make our programs repeat a set of instructions. 
+
+there are two types of loops in python: the while loop, and the for loop.
+today we're learning about the basic while loop, and in the next video,
+we'll take a look at for loops.
+
+so like i said, a loop simply repeats a set of instructions. 
+
+to write a while loop, first write the keyword 'while', and then follow that
+with a condition. for demonstration, I'll just put the value 'True' here 
+as a place holder. follow your condition with a colon, list like with if
+statements. many times, the colon means start a block of code, so that's 
+what we'll do. 
+
+just like if-statements, the code that will repeat must be in a block, so 
+python knows what code is part of the while loop, and what code is 
+part of the rest of the program. a block is written with an indent. 
+I'll place a simple print here to show every time the block is repeated. 
+
+the while loop will continue to run as long as the condition evaluates to
+true. 
+
+when i run this program, you can see that it'll print 'hi' many many times.
+since i put 'True' in for the condition, the while loop will keep repeating,
+which causes the program to continue forever. 
+this is called an infinite loop. 
+To stop it, I'll use a keyboard interrupt. You can also trash the terminal
+if needed. 
+
+obviously, you want to avoid infinite loops in your programs. 
+so to do this, the code inside of the repeating block must affect the condition.
+
+here's an example. 
+
+count = 0
+
+while count < 10:
+    print(count)
+    count += 1
+
+i declare a variable before the while loop called 'count' and set it to zero. 
+my condition for the while loop is 'count is less than 10', and inside of the
+block, i print the variable, and add one to it. 
+
+let's look at the output. it prints 0 then 1 then 2 and so on all the way to 9.
+notice how the program DID come to a stop, and that's because the condition
+and the block are dependent. 
+
+let's run through this program.
+
+first, the variable count is set to zero.
+before the while loop runs, it checks if the condition is true. since 0 is less 
+than 10, the block will run. the variable is printed, and then increased by one.
+then python checks the condition again to see if it has changed. now count is 
+equal to 1. 1 is still less than 10, so the block repeats a second time. 1 is
+printed out, then it becomes 2. it checks if 2 is less than 10, and then runs
+again. 
+
+when count is increased from 9 to 10, however, the condition becomes false, and
+the block stops repeating. since nothing follows the while loops, the program 
+comes to an end. 
+
+so with most of the while loops you write, you should have the condition depend on the
+code inside of the block, to ensure that no infinite loops happen. 
+
+//
+however, there is a way to stop a loop without making the condition false. 
+it's called the break statement.
+
+count = 0
+while True:
+    print(count)
+    count += 1
+    if count == 10:
+        break
+//
+
+now that you have an idea of how while loops work, let's look at a few examples 
+of how to use them. 
+
+this program uses a loop to print out items in a list.
+first, we have two lists, that are the same size, made of first and last names.
+then we have a counting variable starting at zero.
+
+for the loop, we continue while count is less than the length of the first list.
+
+then we print out the item at the count index in each list and increase the count 
+by one. 
+
+let's see what the output looks like.
+
+
+first_names = ['james', 'john', 'jack', 'jerry', 'julian']
+last_names = ['cross', 'doe', 'harrison', 'beck', 'poole' ]
+count = 0
+
+while count < len(first_names):
+    print(first_names[count], last_names[count])
+    count += 1
+
+this is an example why lists are indexed from zero. that way, we could
+start counting at zero, and finish when the count is equal to the length.
+
+now, before you write a million programs going through lists like shown here,
+this is actually a peek at what for loops do. we'll learn more about 
+looping through lists in the next video, but for now, we can still 
+do the same exact thing using while loops. 
+
+
+here's the structure of a program with a repeating menu. 
+just like a regular menu program, it prints the options to the 
+user, takes input, and then uses an if statement to run the 
+corresponding code. however, the difference here is that this
+menu will repeat unit the user decides they want to quit. 
+this variable called done is initially set to False. the
+loop will run /while/ the user is /not done/. choosing option
+four changes the value of this variable, and causes the loop 
+to come to a stop. let's test it out. 
+
+done = False
+print('pick an option')
+
+while not Done:
+    print('1 - option one')
+    print('2 - option two')
+    print('3 - option three')
+    print('4 - quit')
+
+    choice = input()
+
+    if choice == '1':
+        print('you chose option one!')
+    elif choice == '2':
+        print('you chose option two!')
+    elif choice == '3':
+        print('you chose option three!')
+    elif choice == '4':
+        done = True 
+    else:
+        print('not a menu option!')
+
+
+taking that idea, i've wrapped it up into a program with a real purpose.
+this program will let the user practice some math problems, and they get
+to choose which type of problem to solve. once the user is done with the
+program, they can choose the option to quit. i've generated each math
+problem randomly, using the random module. it then takes the user's 
+entered number, checks if its correct, and then prints their result.
+
+here's the program in action. 
+
+
+import random
+done = False 
+print('welcome to math practice! pick an option.')
+
+while not Done:
+    print('1 - practice addition')
+    print('2 - practice subtraction')
+    print('3 - practice multiplication')
+    print('4 - practice division')
+    print('5 - quit')
+
+    choice = input()
+
+    if choice == '1':
+        one = random.randint(1, 100)
+        two = random.randint(1,100)
+        answer = int(input(f'what is {one} + {two}? '))
+        if answer == one + two:
+            print('correct!')
+        else:
+            print(f'incorrect! the correct answer was {one + two}.')
+    elif choice == '2':
+        one = random.randint(1, 100)
+        two = random.randint(1,100)
+        answer = int(input(f'what is {one} - {two}? '))
+        if answer == one - two:
+            print('correct!')
+        else:
+            print(f'incorrect! the correct answer was {one - two}.')
+    elif choice == '3':
+        one = random.randint(1, 12)
+        two = random.randint(1, 12)
+        answer = int(input(f'what is {one} x {two}? '))
+        if answer == one * two:
+            print('correct!')
+        else:
+            print(f'incorrect! the correct answer is {one * two}.')
+    elif choice == '4':
+        one = random.randint(1, 12)
+        two = random.randint(1, 12)
+        product = one * two
+        answer = int(input(f'what is {product} ÷ {one}? '))
+        if answer == two:
+            print('correct!')
+        else:
+            print(f'incorrect! the correct answer is {two}.')
+    elif choice == '5':
+        done = True
+    else: 
+        print('not a valid menu option!')
+
+

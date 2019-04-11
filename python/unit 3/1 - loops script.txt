@@ -1,0 +1,317 @@
+
+-pointers !
+
+
+today we're going to learn about lists. 
+
+so.. what's a list?
+surprise! a list is a list of items.
+
+actually, we've kinda used lists before.
+
+if you remember, a string is what's called a sequence data type,
+and a sequence is just an ordered set. 
+
+[image]
+
+a list is also a sequence data type. it's more general than a string.
+instead of a list of letters, it can hold almost anything. 
+
+let's start by making a list. to create one, make a pair of square brackets. 
+obviously, this list has nothing in it. but, you can add values and
+separate them with commas. 
+
+['red', 'orange', 'yellow', 'green']
+
+these values can be any of the types we've been using. here i used strings
+but you can also make a list of integers, floats, and booleans. 
+
+[5, 12, 6, -34, 45]
+
+[2.3, 1.0003, -12.0, 17.8]
+
+[True, False, False, False, True]
+
+
+you can even make lists with more than one type of data, or a list 
+made up of other lists. (*cough cough, nesting, cough cough*) 
+hold on though, we'll get there.
+
+[5, True, 'blue', 1.3, 'green', False]
+
+[
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+the idea is that a list can hold different things. 
+they can also hold data types that we make ourselves, which we'll get to in 
+the objects unit.
+
+you should know that all of the values in a list are ordered.
+this first value is at index zero, this one at index one, this one at two,
+and so on. remember: it starts from zero, not one. this is because it makes 
+it easier for us to preform operations on sequences. 
+
+[animation?]
+
+so what can you do with a list? 
+
+well you can print it, but that's not super useful. 
+if you remember back to unit one, we can use those same
+sequence operators that we used on strings.
+
+x = ['red', 'orange', 'yellow', 'green']
+
+print(x)
+
+calling len will return the length of the list, and we can use those
+slicing operators to get a certain value in the list, or a segment of the list.
+if you forgot, this is how you get a single item, and this is how you get 
+a segment between two indexes. a colon before or after marks the 
+beginning or end of the segment.
+
+len(x)
+
+x[2]
+
+x[1:3]
+
+x[:2]
+
+x[1:]
+
+
+you can also add lists together and multiply by an integer, to repeat them.
+
+x + ['purple', 'black']
+
+x * 5
+
+these operators return a list or item. they don't actually change what the original list is.
+i can preform all of these operations, and then print out the variable, and see 
+that everything is unchanged. if you /want to change the variable, you have 
+to set the original list to the new one, so in this case, set x equal to the result.
+
+x = x + ['purple' , 'black']
+
+however, the following operations DO modify the original list, and most of them do NOT return
+a value. 
+
+[CTRL + L]
+
+ // moving on. lists also have special operators that strings don't. 
+
+you can add on an item to the end of a list using the append command, and put
+the item you want to store inside the parenthesis as an argument. 
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.append('purple')
+
+print(x)
+
+[CTRL + L]
+
+use the insert command to add an item at a specific point in the 
+list. it'll put the item in the index you specified, and push all 
+of the other items in the list down by one. 
+
+[graphic]
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.insert(2, 'blue')
+
+print(x)
+
+[CTRL + L]
+
+the remove command will remove the first item in the list that equals
+what you specified. if an item is not in the list, this command 
+will throw an error.
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.remove('green')
+
+print(x)
+
+[CTRL + L]
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.remove('purple')
+
+[ERR, CTRL + L]
+
+so if you don't want errors, you can use the keyword 'in' to check if the
+value is actually an item in the list. this will evaluate to true or false. 
+so you can say 'if item in list, remove the item'. that looks like this.
+
+x = ['red', 'orange', 'yellow', 'green']
+
+'red' in x
+'blue' in x
+
+if 'red' in x:
+    x.remove('red')
+
+print(x)
+
+[CTRL + L]
+
+the clear command will remove all of the items in the list, so its becomes
+empty.
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.clear()
+
+print(x)
+
+[CTRL + L]
+
+the index command will find the index of the item you give it and return that.
+if you give it a value that is not inside of the list, it'll throw an error.
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.index('orange')
+
+>>> 1
+
+x.index('purple')
+
+the pop command is sort of like the remove command. however, instead of the exact
+item to remove, you give it an index, so you can remove the second or
+fifth or eighth item or whatever you choose. it will also return 
+the value that it removed, so it's easy to store or print out. 
+we'll talk about why indexing is important when we get to loops.
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.pop(3)
+
+>>> 'green' 
+
+[point out!!]
+
+print(x)
+
+[CTRL + L]
+
+the count command takes one value and will return how many of those are
+inside of the list. 
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x.count('red')
+
+x = ['red', 'orange', 'red', 'green', 'red']
+
+x.count('red')
+
+x.count('purple')
+
+[CTRL + L]
+
+the reverse command will reverse the order of the list.
+
+x = ['red', 'orange', 'red', 'green', 'red']
+
+x.reverse()
+
+print(x)
+
+[CTRL + L]
+
+the sort command will sort all of the items in the order from
+smallest to largest. it's built using the comparison operators, so
+it checks which items are larger using greater than and less than.
+if you have a list of numbers, it'll be sorted from lowest to highest,
+and if you have a list of strings, it'll be sorted alphabetically. 
+
+x = ['red', 'orange', 'red', 'green', 'red']
+
+x.sort()
+
+print(x)
+
+x = [6, 12, 0, -13, 5, -2]
+
+x.sort()
+
+print(x)
+
+so that's about all of the list operators in python. but you have to know
+about one small thing to avoid problems in your programs.
+
+here's a small program. i want you to guess what will print out. pause 
+and take a few seconds to walk through the program.
+
+x = ['apple', 'banana']
+
+y = x
+
+x.append('carrot')
+
+print(y)
+
+it seems pretty simple, right? the output should be 'apple, banana'
+because the variable Y was assigned the value of variable X, and 
+was not changed since it was printed out. when we run this program, 
+you'll see that somehow, carrot printed out. so how did that happen?
+
+it's because a list is what's called a reference type. here's what 
+really happened in this program. 
+
+[g r a p h i c s] 
+
+so first we created a variable called X which stored the two items 
+'apple' and 'banana'. so in memory, we create a space that will hold
+these values, and when we call X in our program, it'll give us this 
+value in memory. that all makes sense. 
+
+when we create variable Y, we assign it to X. so you'd think that 
+in memory, a new space is created and the values of X is copied 
+into the space for variable Y, right? not exactly. Y is actually 
+assigned the location or address of the value X. nothing is actually
+copied. 
+
+calling Y does not return the value of Y, but where it points to.
+so calling Y will actually return X. 
+
+memory
+[ x | ['apple', 'banana'] ]
+[ y | see 'x'             ]
+
+but why does that happen? if x was any of the other types we learned,
+like a string or number, the value would be copied. they would be 
+independent, not the same. 
+
+well the problem with lists, is that they have the potential to be 
+very very very large. a single list can contain hundreds or more 
+values, so if you went to copy the value, it would be an enormous
+stain on your computer. your program would be super slow! so simply 
+pointing to the real value is a lot easier. 
+
+so going back to this program, how do we get it to print the output we
+want? how do we make the two variables independent?
+
+to do so, you must force python to copy the list, instead of making a 
+reference to it. instead of setting Y to X, I'll say, y equals 
+x.copy(). 
+
+if i run the program again, we finally get the desired output. 
+
+that's all for this lesson, but stay tuned, because in the 
+following videos, we're going to use the true power of
+lists.
+
+['out', 'dog', 'code'].sort()
+
+code dog out. 
+
+-cast tho hmm
