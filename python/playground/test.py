@@ -60,7 +60,7 @@
 # stop = False
 # print('pick an option')
 
-# while stop != True:
+# while not stop:
 #     print('1 - option one')
 #     print('2 - option two')
 #     print('3 - option three')
@@ -79,10 +79,10 @@
 #     else:
 #         print('not a menu option!')
 
-first_names = ['james', 'john', 'jack', 'jerry', 'julian']
-last_names = ['cross', 'doe', 'harrison', 'beck', 'poole' ]
-count = 0
+# first_names = ['james', 'john', 'jack', 'jerry', 'julian']
+# last_names = ['cross', 'doe', 'harrison', 'beck', 'poole' ]
+# count = 0
 
-while count < len(first_names):
-    print(first_names[count], last_names[count])
-    count += 1
+# while count < len(first_names):
+#     print(first_names[count], last_names[count])
+#     count += 1
