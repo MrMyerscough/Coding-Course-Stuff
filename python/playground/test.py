@@ -86,3 +86,34 @@
 # while count < len(first_names):
 #     print(first_names[count], last_names[count])
 #     count += 1
+
+class Book:
+    def __init__(self, value: int):
+        self.thing = value
+
+    def __eq__(self, book2):
+        return self.thing == book2.thing
+    
+    def __ne__(self, book2):
+        return self.thing != book2.thing
+    
+    def __lt__(self, book2):
+        return self.thing < book2.thing
+    
+    def __gt__(self, book2):
+        return self.thing > book2.thing
+
+    def __le__(self, book2):
+        return self.thing <= book2.thing
+
+    def __ge__(self, book2):
+        return self.thing >= book2.thing
+
+    def __str__(self):
+        return str(self.thing)
+
+x = [ Book(1), Book(-12), Book(14), Book(39)]
+
+x.sort()
+for book in x:
+    print(str(book))

@@ -82,6 +82,16 @@ x[:2]
 
 x[1:]
 
+you can also use negative numbers as indexes, and it'll count the from the end of the list.
+
+x[-2]
+
+x[-3:-1]
+
+x[:-2]
+
+x[-3:]
+
 
 you can also add lists together and multiply by an integer, to repeat them.
 
@@ -89,7 +99,7 @@ x + ['purple', 'black']
 
 x * 5
 
-these operators return a list or item. they don't actually change what the original list is.
+these operators return a list or item. they don't actually change the original variable.
 i can preform all of these operations, and then print out the variable, and see 
 that everything is unchanged. if you /want to change the variable, you have 
 to set the original list to the new one, so in this case, set x equal to the result.
@@ -98,6 +108,28 @@ x = x + ['purple' , 'black']
 
 however, the following operations DO modify the original list, and most of them do NOT return
 a value. 
+
+
+
+to change the value of one specific item in the list, select it using brackets,
+then use the equal sign to assign the new value.
+
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x[2] = 'purple'
+
+print(x)
+
+
+you can also replace whole segments of a list with a new list, using the same
+bracket selectors. 
+
+x = ['red', 'orange', 'yellow', 'green']
+
+x[0:3] = ['black', 'white', 'pink']
+
+print(x)
 
 [CTRL + L]
 
@@ -304,9 +336,14 @@ to do so, you must force python to copy the list, instead of making a
 reference to it. instead of setting Y to X, I'll say, y equals 
 x.copy(). 
 
+this command actually copies the list item by item, instead of referencing 
+the first one. 
+
 if i run the program again, we finally get the desired output. 
 
-that's all for this lesson, but stay tuned, because in the 
+awesome!
+
+so that's all for this lesson, but stay tuned, because in the 
 following videos, we're going to use the true power of
 lists.
 

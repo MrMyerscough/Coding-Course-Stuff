@@ -47,7 +47,9 @@ values. a starting value and ending value. if i give it
 you can see that when i try it in the interpreter. calling
 the command repeatedly will give different numbers.
 
-back to the 8-ball program, it generates a random number between 
+back to the 8-ball program.
+it takes an input so the user can type something in but it 
+doesn't do anything with it. then it generates a random number between 
 1 and 10, and then checks all of them in the if-statement. 
 the program will print a 'yes' answer, 'no' answer, or 
 'maybe' answer depending on the number generated. what's
@@ -64,7 +66,7 @@ if you've gained access or entered the login wrong.
 
 it does this using nested conditionals. Nesting in programming
 means one thing contains a similar thing. In this case, there's 
-an if-statement inside of an if statement.
+two if-statements inside of an if statement.
 
 here's how the logic works. 
 if the username is correct, check if the password is correct.
@@ -101,13 +103,15 @@ and password must be incorrect.
 
 x2 - is good
 
+here's the output for this program.
+
 there's also some functionality we can add here that can't be achieved with
 nested conditionals. the 'or' operator will return 'true' if at least
 one of the two conditions is 'true'. i can replace these two conditions
 with an or statement, and a print that says 'username OR password 
 incorrect'
 
-here's the output for this program.
+let's test that.
 
 okay, this last one is cool. it's a game of rock-paper-scissors. 
 it looks long but it's not that difficult. 
