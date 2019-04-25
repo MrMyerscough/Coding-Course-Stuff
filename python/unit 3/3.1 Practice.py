@@ -1,7 +1,7 @@
-"""Unit 3 - Lists - Intro to methods
-In this example there will be 6 different tasks to complete using methods that can be performed on lists.
-Make sure to run your code in between each task to make sure that program is working correctly before moving on.
-"""
+# 3.1 - Lists
+# In this example there will be 6 different tasks to complete using 
+# Lists. Make sure to run your code in between each task 
+# to make sure that program is working correctly before moving on.
 
 ids = [4353, 2314, 2956, 3382, 9362, 3900]
 
@@ -16,8 +16,11 @@ print(ids)
 
 
 
-# Task 3: Insert 4499 in the list after 9362.
-# When printed, the list should have 4499 directly after 9362
+# Task 3: Insert 4499 in the list after 9362. This should work
+# wherever 9362 is placed in the list.  When printed, the list 
+# should have 4499 directly after 9362. HINT: the insert
+# should depend on the index of 9362. 
+
 
 
 print(ids)

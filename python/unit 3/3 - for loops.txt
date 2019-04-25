@@ -1,0 +1,40 @@
+last time we looked at while loops, the first type of loop in python.
+today, we're looking at for-loops. the second type of loop.
+
+for loops are more specific than while loops, but still very very useful. 
+
+they're built for sequences, so before you start looping, you'll need
+a sequence first. i'll use a string, and set that to x.
+
+then we can write our for-loop. start with the keyword 'for'. 
+follow that with the name of a new variable. i'll name mine 
+'letter' and you'll see why in a second. then the keyword 'in'
+followed by your sequence and a colon. 
+
+we learned about the 'in' operator in our lists lesson, but don't get 
+confused, this means something different. 
+
+you probably guessed it: after your colon, you can start a block on the
+following lines. 
+
+so what does the for loop do? and how many times does it repeat?
+
+the for loop will repeat it's block for every item in the sequence
+~~and it gives you what the item is in a variable. that variable
+is the one you named right before the word 'in', so in this program
+it's 'letter'.
+
+in the block, i'm just going to simply print letter. 
+let's look at the output.
+
+x = 'hello'
+
+for letter in x:
+    print(letter)
+
+[run]
+
+as you can see, the loop ran 5 times, and the value of letter
+changed 
+
+this is called iteration. 
