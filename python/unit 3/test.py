@@ -23,14 +23,24 @@
     
 #     outer_count += 1
 
-outer_count = 1
+# outer_count = 1
 
-while outer_count <= 10:
+# while outer_count <= 10:
 
-    inner_count = 1
+#     inner_count = 1
 
-    while inner_count <= 10:
-        print(f'{outer_count} x {inner_count} = {outer_count * inner_count}')
-        inner_count += 1
+#     while inner_count <= 10:
+#         print(f'{outer_count} x {inner_count} = {outer_count * inner_count}')
+#         inner_count += 1
     
-    outer_count += 1
+#     outer_count += 1
+
+print('hello there!')
+
+user_number = input('pick a number')
+
+x = int(user_number)
+
+x *= 2
+
+print(user_number, 'x 2 =', x)
