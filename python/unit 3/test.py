@@ -35,7 +35,6 @@
     
 #     outer_count += 1
 
-<<<<<<< HEAD
 # count = 0
 # total = 100
 
@@ -142,12 +141,39 @@
 # print(numbers)
 
 
-print('hello there!')
+# print('hello there!')
 
-user_number = input('pick a number')
+# user_number = input('pick a number')
 
-x = int(user_number)
+# x = int(user_number)
 
-x *= 2
+# x *= 2
 
-print(user_number, 'x 2 =', x)
+# print(user_number, 'x 2 =', x)
+
+
+# test_scores = [96, 100, 82, 84, 93, 100]
+
+# total = 0
+
+# for score in test_scores:
+#     total = total + score
+
+# average = total / len(test_scores)
+
+# print('the average is', average)
+
+# x = ['green', 'yellow', 'red', 'blue', 'orange']
+# y = ['apple', 'lemon', 'strawberry', 'raspberry', 'orange']
+
+# for i in range( len(x) ):
+#     color = x[i]
+#     flavor = y[i]
+#     print(color, 'is', flavor, 'flavored!')
+
+x = [True, False, True]
+
+for boo in x:
+    boo = not boo
+
+print(x)

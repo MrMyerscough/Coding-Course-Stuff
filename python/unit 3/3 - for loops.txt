@@ -47,7 +47,7 @@ for letter in x:
 
 [run]
 
-here the value of 'letter' changed each time the block ran. 
+the value of 'letter' changed each time the block ran. 
 it started with the first item in the sequence
 and ended with the last.
 
@@ -64,4 +64,209 @@ for model in models:
 this is the exact same setup, except it uses a list of model numbers instead
 of letters. 
 
+[run]
+
+loops let you do cool things with sequences because they don't depend on 
+a set number of items. 
+
+test_scores = [96, 100, 82, 84, 93, 100]
+
+total = 0
+
+for score in test_scores:
+    total = total + score
+
+average = total / len(test_scores)
+
+print('the average is', average)
+
+[run]
+
+this program starts with a list of numbers, which holds test scores. 
+then a variable called total is used to keep track of the sum of all test scores.
+the for loop goes through every number in the list, and adds it to the
+total variable. 
+after the loop runs, we find the average by dividing the total by the length
+of the list. 
+
+when i run this you can see that we get the expected output.
+like i said, a for loop doesn't depend on a set number of items,
+so if i add 6 more test scores to the list, the program still runs
+completely fine. 
+
+sometimes, however, you do want a for loop to depend on a set number, and 
+you can achieve that with the range command. 
+
+[open interpreter]
+
+the range command returns a sequence of numbers that you can use in a for loop.
+to see things more clearly, i'll cast to a list.
+it's pretty straightforward. if you want a sequence that's 10 items long,
+call the range command with the number 10 as an argument. 
+the returned sequence starts at zero and ends at 9, for 10 total items.
+likewise, if you want 50, give it 50. it'll take whichever number. 
+
+it's a weird idea, i know, but just like most things in programming, the 
+range command starts counting at zero instead of one. this is helpful with lists
+later on. 
+
+list( range(10) )
+
+list( range(50) )
+
+list( range(20) )
+
+if you want it to count from one number to another number, you can specify
+a start and end to the sequence. if i give it 10 and 20, it'll start at 11
+and end at 19, again 10 items long.
+
+list( range(10, 20) )
+
+list( range(5, 25) )
+
+if we try to count backwards, say from 10 to negative 10, it doesn't return 
+any numbers in the list, and that's because by default, it counts /up by /one.
+to change the amount it counts by, give it a third number. in this case, 
+giving -1 will count down by ones. 
+
+list( range(10, -10) )
+
+list( range(10, -10, -1) )
+
+this is handy if you want to count in 10s or even numbers, or multiples of 7,
+or whatever you'd like. 
+
+list( range(0, 100, 10) )
+list( range(10, 30, 2) )
+list( range(0, 49, 7) )
+
+that's about all there is to the range command, so let's see how it would work
+in a for loop program. 
+
+of course you can make counting loops of all different kinds; but we did that with while loops,
+which wasn't very exciting
+
+for i in range(10):
+    print(i)
+
+this program prints out items in two lists at once. 
+
+x = ['green', 'yellow', 'red', 'blue', 'orange']
+y = ['apple', 'lemon', 'strawberry', 'raspberry', 'orange']
+
+for i in range( len(x) ):
+    color = x[i]
+    flavor = y[i]
+    print(color, 'is', flavor, 'flavored!')
+
+here we have two corresponding lists, where they are the same length, and an 
+item in one list has a value that pairs with it, at the same position in the 
+other list. that means 'green' goes with 'apple' and 'red' goes with 'strawberry'
+
+because you can't make a for loop that goes over two items from different lists,
+ i instead made the loop go over the range of the list. 
+this way, it counts the index, starting from zero. 
+i use that index to select an item from each list and then print it out.
+this lets me access two or more items at the same time. 
+
+
+by now, we're starting to make useful programs that accept all types of data. 
+let's write a simple algorithm to find the largest number in a list. 
+and by the way, an algorithm is just a set of steps that solves a class of 
+problems. 
+
+to find the largest number in a set, you'll need to compare them to 
+each other. 
+
+after my list of numbers i create a variable called 'largest' and set it to zero.
+then i simply loop through each number in the list. here's how it works.
+if the number is greater than the one in the 'largest' variable, that number
+then becomes the largest. since it'll go through every number in the list,
+it will find the greatest number out of all of them, as long as it's above zero. 
+
+numbers = [1, 523, 6.3, 1541, 203, 4, 28, -12, 1358]
+
+largest = 0
+
+for number in numbers:
+    if number > largest:
+        largest = number
+
+print('the largest number is', largest)
+
+cool! it worked. now you can use this piece of code to find the largest number
+in a list, if you ever needed to. or you could use python's built in max
+function, that does the exact same thing. (lol)
+
+but the idea carries: for loops can be used to compare items in a set.
+you can easily modify this program to find the longest string out of
+a list of strings, which python does /not have a built in function for. 
+
+okay, two more examples. 
+
+for loops are also an easy way to make modified versions of lists.
+let's say you have a list of booleans, and you want to flip each value
+in the list. there's not really an easy way of doing this; you /have
+to go through each item and flip them one by one. fortunately, for 
+loops are great at that. 
+
+i'll do this two ways.
+
+values = [True, True, False, True, False, False]
+
+# making a new list
+new_values = []
+
+for value in values:
+    new_values.append( not value )
+
+print(values)
+print(new_values)
+
+# keeping the old list
+
+for i in range(len(values)):
+    values[i] = not values[i]
+
+print(values)
+
+the first way, i'm going through each item in the list,
+flipping the value, and then adding that on to a new list,
+called new values. this way, i end up with a modified list
+and an unmodified list. you might need that, depending on your
+program.
+
+the second way, i just change the original list to have different 
+values. instead of looping through every item, i loop through 
+the range, and then set the item at the index to the opposite value. 
+
+[run?]
+
+at first, you might want to loop over the list like normal,
+and then set the variable to the new value, but that actually
+doesn't work. >_<
+
+for value in values:
+    value = not value
+
+modifying the given variable doesn't do anything, because it's just
+a copy of the item in the list. 
+
+lastly, you may also want to nest for loops in certain cases.
+
+
+
 - ask the users for numbers until STOP, then take the sum (highest, lowest, average, median?)
+
+
+
+-basic for loop
+    goes over every item
+    for not set number
+-range command
+    when you want to count to a known set number
+-nesting - adj + noun example
+    patterns 
+-algorithm (greatest number)
+    comparing values in list
+-modifying a list / sequence
