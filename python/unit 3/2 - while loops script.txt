@@ -8,9 +8,13 @@ they would start at the first command, run through them one by one,
 and be finished when they ran out. 
 
 print('hello there!')
+
 user_number = input('pick a number')
+
 x = int(user_number)
+
 x *= 2
+
 print(user_number, 'x 2 =', x)
 
 then we introduced conditionals, and our programs could have different
@@ -84,7 +88,9 @@ i declare a variable before the while loop called 'count' and set it to zero.
 my condition for the while loop is 'count is less than 10', and inside of the
 block, i print the variable, and add one to it. 
 
-let's look at the output. it prints 0 then 1 then 2 and so on all the way to 9.
+let's look at the output. 
+
+it prints 0 then 1 then 2 and so on all the way to 9.
 notice how the program DID come to a stop, and that's because the condition
 and the block are dependent. 
 

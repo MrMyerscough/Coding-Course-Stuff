@@ -35,6 +35,7 @@
     
 #     outer_count += 1
 
+<<<<<<< HEAD
 # count = 0
 # total = 100
 
@@ -141,3 +142,12 @@
 # print(numbers)
 
 
+print('hello there!')
+
+user_number = input('pick a number')
+
+x = int(user_number)
+
+x *= 2
+
+print(user_number, 'x 2 =', x)
