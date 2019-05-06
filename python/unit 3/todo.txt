@@ -1,0 +1,4 @@
+while loops practice
+
+for loops practice 
+-find the greatest / lowest number. 
