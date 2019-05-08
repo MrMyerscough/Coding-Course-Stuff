@@ -54,6 +54,9 @@ and ended with the last.
 this is called iteration. 
 the loop runs through each item in the sequence, or iterates over it. 
 
+also notice how if you read the instruction like a sentence, it kinda makes sense.
+'for every letter in x, do whatever. or in this case print.'
+
 let's look at an example using a list.
 
 models = ['J8', 'J12', 'J18', 'J20', 'L4', 'L6']
@@ -133,12 +136,12 @@ list( range(10, -10) )
 
 list( range(10, -10, -1) )
 
-this is handy if you want to count in 10s or even numbers, or multiples of 7,
+this is handy if you want to count in 10s or even numbers, or negative multiples of 7,
 or whatever you'd like. 
 
 list( range(0, 100, 10) )
 list( range(10, 30, 2) )
-list( range(0, 49, 7) )
+list( range(49, 0, -7) )
 
 that's about all there is to the range command, so let's see how it would work
 in a for loop program. 
@@ -166,7 +169,7 @@ other list. that means 'green' goes with 'apple' and 'red' goes with 'strawberry
 because you can't make a for loop that goes over two items from different lists,
  i instead made the loop go over the range of the list. 
 this way, it counts the index, starting from zero. 
-i use that index to select an item from each list and then print it out.
+i use that index to select an item from /both lists/ and then print it out.
 this lets me access two or more items at the same time. 
 
 
@@ -199,10 +202,8 @@ in a list, if you ever needed to. or you could use python's built in max
 function, that does the exact same thing. (lol)
 
 but the idea carries: for loops can be used to compare items in a set.
-you can easily modify this program to find the longest string out of
-a list of strings, which python does /not have a built in function for. 
-
-okay, two more examples. 
+think about how you could modify this program to find the longest string out of
+a list of strings. python doesn't have a built in function for that. 
 
 for loops are also an easy way to make modified versions of lists.
 let's say you have a list of booleans, and you want to flip each value
@@ -297,9 +298,11 @@ also notice how i keep track of the greatest divisor and dividend with variables
 outside of the loop. that's because you can't make a variable inside of a loop
 and then access it outside of the loop.
 
+[test question]
+
 
 nested for-loops are also a way to iterate over every item in a two-dimensional list;
-which is just a list where each item is another list. let's look at this program
+that's just a list where each item is another list. let's look at this program
 
 
 grid = [
@@ -323,13 +326,24 @@ this is how you'd print the 2nd item in the 3rd row.
 
 item = grid[2][1]
 
-using that concept, we can use for loops to print every 
+using that concept, we can use for loops to print every item in the entire grid.
+
+for row in grid:
+    for item in row:
+        print(item)
+
+cool. 
+i know that was a lot of use cases in a single video, but that's because for
+loops can be used in many places, and they're pretty useful. 
+
+take a chance to practice what you've seen here, and pretty soon you'll 
+master iteration. 
+
+code dog out. 
 
 
-
+lab / practice idea
 - ask the users for numbers until STOP, then take the sum (highest, lowest, average, median?)
-
-
 
 -basic for loop
     goes over every item
