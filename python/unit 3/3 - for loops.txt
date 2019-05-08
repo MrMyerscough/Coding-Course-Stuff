@@ -120,7 +120,7 @@ list( range(50) )
 list( range(20) )
 
 if you want it to count from one number to another number, you can specify
-a start and end to the sequence. if i give it 10 and 20, it'll start at 11
+a start and end to the sequence. if i give it 10 and 20, it'll start at 10
 and end at 19, again 10 items long.
 
 list( range(10, 20) )
