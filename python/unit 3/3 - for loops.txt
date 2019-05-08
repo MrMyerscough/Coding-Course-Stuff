@@ -253,6 +253,77 @@ modifying the given variable doesn't do anything, because it's just
 a copy of the item in the list. 
 
 lastly, you may also want to nest for loops in certain cases.
+since one loop can compare values in one list, you can use nested loops to 
+compare values in two lists. here's a common use case.
+
+x = [29, 87, 93, 88, 41, 23, 65, 88, 58, 38]
+
+y = [49, 31, 80, 97, 93, 79, 72, 24, 84, 27]
+
+let's say we want to find the greatest quotient out of any combination of 
+numbers from these two lists. 
+it could be 88 divided by 24 or maybe 97 over 41.
+
+you'd have to go through every single item in each list and divide them out 
+to find the greatest quotient. and if these lists were each 100 items long
+instead of 10, that would take forever to find. instead, we can use nested 
+for loops. 
+
+x = [29, 87, 93, 88, 41, 23, 65, 88, 58, 38]
+
+y = [49, 31, 80, 97, 93, 79, 72, 24, 84, 27]
+
+greatest_quotient = 0
+greatest_dividend = 0
+greatest_divisor = 0
+
+for number in x:
+    for second_number in y:
+
+        if number / second_number > greatest:
+            greatest_quotient = number / second_number
+            greatest_dividend = number
+            greatest_divisor = second_number
+
+        if second_number / number > greatest:
+            greatest_quotient = number / second_number
+            greatest_dividend = second_number
+            greatest_divisor = number
+
+notice how i use different names for each loops variables. that's because 
+you cant really keep track of two things with only one name.
+
+also notice how i keep track of the greatest divisor and dividend with variables
+outside of the loop. that's because you can't make a variable inside of a loop
+and then access it outside of the loop.
+
+
+nested for-loops are also a way to iterate over every item in a two-dimensional list;
+which is just a list where each item is another list. let's look at this program
+
+
+grid = [
+    [1,  2,  3,  4],
+    [5,  6,  7,  8],
+    [9,  10, 11, 12],
+    [13, 14, 15, 16]
+]
+
+here we have a 2D list which is 4x4 items large. 
+
+to access a single item, first you need to select one of the smaller lists,
+which kind of act as rows in a grid. 
+once you select that list, then you can select an item from it, using a second
+selector. think of it like the first number selecting the row and the second
+number selecting the column. 
+
+this is how you'd print the 2nd item in the 3rd row. 
+
+** graphics label the positions **
+
+item = grid[2][1]
+
+using that concept, we can use for loops to print every 
 
 
 
@@ -270,3 +341,6 @@ lastly, you may also want to nest for loops in certain cases.
 -algorithm (greatest number)
     comparing values in list
 -modifying a list / sequence
+
+
+ah heck two dimensional arrays
