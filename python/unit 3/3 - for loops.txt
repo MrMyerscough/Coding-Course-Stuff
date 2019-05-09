@@ -59,12 +59,12 @@ also notice how if you read the instruction like a sentence, it kinda makes sens
 
 let's look at an example using a list.
 
-models = ['J8', 'J12', 'J18', 'J20', 'L4', 'L6']
+animals = ['cow', 'fish', 'bird', 'giraffe', 'shark', 'dog']
 
-for model in models:
-    print(model)
+for animal in animals:
+    print(animal)
 
-this is the exact same setup, except it uses a list of model numbers instead
+this is the exact same setup, except it uses a list of animals instead
 of letters. 
 
 [run]
@@ -103,14 +103,14 @@ you can achieve that with the range command.
 [open interpreter]
 
 the range command returns a sequence of numbers that you can use in a for loop.
-to see things more clearly, i'll cast to a list.
+to see things more clearly, i'll cast to a list in the interpreter.
 it's pretty straightforward. if you want a sequence that's 10 items long,
 call the range command with the number 10 as an argument. 
 the returned sequence starts at zero and ends at 9, for 10 total items.
 likewise, if you want 50, give it 50. it'll take whichever number. 
 
 it's a weird idea, i know, but just like most things in programming, the 
-range command starts counting at zero instead of one. this is helpful with lists
+range command returns a sequence starting at zero instead of one. this is helpful with lists
 later on. 
 
 list( range(10) )
@@ -168,42 +168,12 @@ other list. that means 'green' goes with 'apple' and 'red' goes with 'strawberry
 
 because you can't make a for loop that goes over two items from different lists,
  i instead made the loop go over the range of the list. 
-this way, it counts the index, starting from zero. 
+this way, it counts to the length of the list, starting from zero. 
 i use that index to select an item from /both lists/ and then print it out.
-this lets me access two or more items at the same time. 
+this lets me access two or more items at the same time.
 
 
-by now, we're starting to make useful programs that accept all types of data. 
-let's write a simple algorithm to find the largest number in a list. 
-and by the way, an algorithm is just a set of steps that solves a class of 
-problems. 
 
-to find the largest number in a set, you'll need to compare them to 
-each other. 
-
-after my list of numbers i create a variable called 'largest' and set it to zero.
-then i simply loop through each number in the list. here's how it works.
-if the number is greater than the one in the 'largest' variable, that number
-then becomes the largest. since it'll go through every number in the list,
-it will find the greatest number out of all of them, as long as it's above zero. 
-
-numbers = [1, 523, 6.3, 1541, 203, 4, 28, -12, 1358]
-
-largest = 0
-
-for number in numbers:
-    if number > largest:
-        largest = number
-
-print('the largest number is', largest)
-
-cool! it worked. now you can use this piece of code to find the largest number
-in a list, if you ever needed to. or you could use python's built in max
-function, that does the exact same thing. (lol)
-
-but the idea carries: for loops can be used to compare items in a set.
-think about how you could modify this program to find the longest string out of
-a list of strings. python doesn't have a built in function for that. 
 
 for loops are also an easy way to make modified versions of lists.
 let's say you have a list of booleans, and you want to flip each value
@@ -221,7 +191,9 @@ new_values = []
 for value in values:
     new_values.append( not value )
 
+print('old list:')
 print(values)
+print('new list:')
 print(new_values)
 
 # keeping the old list
@@ -229,6 +201,7 @@ print(new_values)
 for i in range(len(values)):
     values[i] = not values[i]
 
+print('modified original list:')
 print(values)
 
 the first way, i'm going through each item in the list,
@@ -247,58 +220,104 @@ at first, you might want to loop over the list like normal,
 and then set the variable to the new value, but that actually
 doesn't work. >_<
 
+print('old list:')
+print(values)
+
 for value in values:
     value = not value
 
+print('resulting list:')
+print(values)
+
 modifying the given variable doesn't do anything, because it's just
 a copy of the item in the list. 
+
+okay.
+by now, we're starting to make useful programs that accept all types of data. 
+let's write a simple algorithm to find the largest number in a list. 
+and by the way, an algorithm is just a set of steps that solves a class of 
+problems. 
+
+to find the largest number in a set, you'll need to compare them to 
+each other. 
+
+here's how it works.
+after my list of numbers i create a variable called 'largest' and set it to zero.
+then i simply loop through each number in the list. 
+if the number is greater than the one in the 'largest' variable, that number
+then becomes the largest. since it'll go through every number in the list,
+it will find the greatest number out of all of them, as long as it's above zero. 
+
+numbers = [1, 523, 6.3, 1541, 203, 4, 28, -12, 1358]
+
+largest = 0
+
+for number in numbers:
+    if number > largest:
+        # print to show what is going on
+        print(f'{number} is greater than {largest}. now it's the largest!')
+        largest = number
+
+print('the largest number is', largest)
+
+cool! it worked. 
+
+in the output, it shows how it went through each number in the list, and kept track of the
+biggest value. 
+
+now you can use this piece of code to find the largest number
+in a list, if you ever needed to. or you could use python's built in max
+function, that does the exact same thing. (lol)
+
+largest = max(numbers)
+
+print(largest)
+
+but the idea carries: for loops can be used to compare items in a set.
+think about how you could modify this program to find the longest string out of
+a list of strings. python doesn't have a built in function for that. 
+
 
 lastly, you may also want to nest for loops in certain cases.
 since one loop can compare values in one list, you can use nested loops to 
 compare values in two lists. here's a common use case.
 
-x = [29, 87, 93, 88, 41, 23, 65, 88, 58, 38]
+math_students = ['matt', 'barry', 'alyssa', 'aliza', 'carl', 'john', 'beth', 'nate', 'hannah', 'drew']
 
-y = [49, 31, 80, 97, 93, 79, 72, 24, 84, 27]
+art_students = ['molly', 'katie', 'carl', 'jake', 'hannah', 'lila', 'noah', 'barry', 'sean', 'carlos']
 
-let's say we want to find the greatest quotient out of any combination of 
-numbers from these two lists. 
-it could be 88 divided by 24 or maybe 97 over 41.
+let's say we have two lists of names. one is full of the students in math class,
+and the second is the students in art class. how can we find which students are 
+in both classes?
 
-you'd have to go through every single item in each list and divide them out 
-to find the greatest quotient. and if these lists were each 100 items long
-instead of 10, that would take forever to find. instead, we can use nested 
-for loops. 
+you'd have to go through every name in the first list, and look if there's a 
+matching name in the second list. in this example each list only has 10 
+names, but if it was more like 100 names, or larger, it would take forever
+to find. instead, we can use nested for loops.
 
-x = [29, 87, 93, 88, 41, 23, 65, 88, 58, 38]
+math_students = ['matt', 'barry', 'alyssa', 'aliza', 'carl', 'john', 'beth', 'nate', 'hannah', 'drew']
 
-y = [49, 31, 80, 97, 93, 79, 72, 24, 84, 27]
+art_students = ['molly', 'katie', 'carl', 'jake', 'hannah', 'lila', 'noah', 'barry', 'sean', 'carlos']
 
-greatest_quotient = 0
-greatest_dividend = 0
-greatest_divisor = 0
+students_in_both = []
 
-for number in x:
-    for second_number in y:
+for math_student in math_students:
+    for art_student in art_students:
+        if math_student == art_student:
+            students_in_both.append(math_student)
 
-        if number / second_number > greatest:
-            greatest_quotient = number / second_number
-            greatest_dividend = number
-            greatest_divisor = second_number
+print('the following students are in both math and art:')
+for student in students_in_both:
+    print(student)
 
-        if second_number / number > greatest:
-            greatest_quotient = number / second_number
-            greatest_dividend = second_number
-            greatest_divisor = number
+in this program, i go through every single student in math class. then, 
+for each math student, i go through each art student. if the two names
+are equal, then the student is in both classes, and I add that name to
+a list that will remember those students. when the nested loop finishes,
+i print the smaller list again with a for loop. pretty practical. 
 
-notice how i use different names for each loops variables. that's because 
+notice how i use different names for each loops' variables. that's because 
 you cant really keep track of two things with only one name.
-
-also notice how i keep track of the greatest divisor and dividend with variables
-outside of the loop. that's because you can't make a variable inside of a loop
-and then access it outside of the loop.
-
-[test question]
 
 
 nested for-loops are also a way to iterate over every item in a two-dimensional list;
@@ -332,13 +351,17 @@ for row in grid:
     for item in row:
         print(item)
 
-cool. 
+for every row in the grid, and every item in that row, print the item. cool. 
+
+
+
 i know that was a lot of use cases in a single video, but that's because for
-loops can be used in many places, and they're pretty useful. 
+loops can be used in many places, and they're pretty handy. 
 
 take a chance to practice what you've seen here, and pretty soon you'll 
 master iteration. 
 
+alright. 
 code dog out. 
 
 

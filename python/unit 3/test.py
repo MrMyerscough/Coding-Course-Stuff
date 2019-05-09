@@ -171,9 +171,105 @@
 #     flavor = y[i]
 #     print(color, 'is', flavor, 'flavored!')
 
-x = [True, False, True]
+# x = [True, False, True]
 
-for boo in x:
-    boo = not boo
+# for boo in x:
+#     boo = not boo
 
-print(x)
+# print(x)
+
+# import random
+# x = []
+# y = []
+
+# for i in range(10):
+#     x.append(random.randint(1,100))
+#     y.append(random.randint(1,100))
+
+# print(x)
+# print(y)
+
+
+#  ----------------
+
+
+# dividends = [58, 87, 93, 88, 73, 66, 65, 88, 58, 78]
+# divisors = [22, 31, 55, 38, 36, 12, 19, 24, 33, 27]
+
+# greatest_remainder = 0
+
+# for dividend in dividends:
+#     for divisor in divisors:
+
+#         if dividend % divisor > greatest_remainder:
+#             greatest_remainder = dividend % divisor
+#             greatest_dividend = dividend
+#             greatest_divisor = divisor
+
+# print(f'the greatest remainder was {greatest_dividend} / {greatest_divisor} = {greatest_remainder}')
+
+
+# --------------
+
+# words = ['hypothesis', 'coffee', 'iteration', 'software', 'landscape', 'code', 'rainbow']
+
+# vowels = 'aeiou'
+
+# most_occurrences = 0
+# frequent_word = ''
+
+# for word in words:
+
+#     # how many vowels are in the word
+#     vowel_count = 0
+
+#     # for every vowel, count how many are in the word, and add that to the count
+#     for vowel in vowels:
+#         vowel_count += word.count(vowel)
+    
+#     if vowel_count > most_occurrences: 
+#         most_occurrences = vowel_count
+#         frequent_word = word
+
+# print(f"the word {frequent_word} had the most vowels in it!")
+
+
+# x = [58, 87, 93, 88, 73, 66, 65, 88, 58, 78]
+# y = [22, 31, 55, 38, 36, 12, 19, 24, 33, 27]
+
+# greatest_difference = 0
+# first_number = 0
+# second_number = 0
+
+# for number_1 in x:
+#     for number_2 in y:
+
+#         if abs(number_1 - number_2) > greatest_difference:
+#             greatest_difference = abs(number_1 - number_2)
+#             first_number = number_1
+#             second_number = number_2
+
+# print(f'the greatest difference was between {first_number} and {second_number} of {greatest_difference}')
+
+
+# math_students = ['matt', 'barry', 'alyssa', 'aliza', 'carl', 'john', 'beth', 'nate', 'hannah', 'drew']
+
+# art_students = ['molly', 'katie', 'carl', 'jake', 'hannah', 'lila', 'noah', 'barry', 'sean', 'carlos']
+
+# students_in_both = []
+
+# # for math_student in math_students:
+# #     for art_student in art_students:
+# #         if math_student == art_student:
+# #             students_in_both.append(math_student)
+
+# students_in_both = list(set(math_students).intersection(set(art_students)))
+
+# print('the following students are in both math and art:')
+# for student in students_in_both:
+#     print(student)
+
+outro = ['code', 'dog', 'out']
+
+for word in outro:
+    print(word)
