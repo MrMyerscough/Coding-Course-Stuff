@@ -254,8 +254,8 @@ largest = 0
 
 for number in numbers:
     if number > largest:
-        # print to show what is going on
-        print(f'{number} is greater than {largest}. now it's the largest!')
+        # print to show what is going on - can be removed
+        print(f"{number} is greater than {largest}. now it's the largest!")
         largest = number
 
 print('the largest number is', largest)
