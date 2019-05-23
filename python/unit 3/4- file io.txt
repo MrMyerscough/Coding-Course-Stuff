@@ -1,0 +1,269 @@
+so far in python, all of our programs only work with the terminal.
+we take input and print output all in the one place. but of course,
+programs can use all kinds of input and output. 
+
+today, we're going to learn how to interact with text files in python, and
+in a later unit, we'll learn about how to make games and graphics. 
+
+okay. so before we start accessing a file, let's have something to 
+access first. in my project folder, in the same folder as my python
+file, i'll create a file called data.txt. you can name this whatever 
+you want, just remember it for later on, and don't forget the extension
+dot txt. that makes it a text file.
+
+inside i'll just type a few words. 
+
+[
+
+coding is fun!
+python is great!
+
+]
+
+don't forget to save your file. 
+
+back inside of our python code, you can make a file object using the open
+command. this command takes two arguments: the first is the name of the
+file in a string. in my case, i'll put 'data.txt' to access my file.
+
+the second argument is the mode. 
+there are 4 main modes: read, write, append, and update
+
+let's start with the first mode. 
+the letter 'r' means read, so i'll put that. if you don't give it a second
+argument, it'll default to reading the file.
+
+okay, now to access the file object, we have to store it inside of a variable.
+to keep things simple, i'll name mine 'my_file'.
+
+whenever you open a file you always have to close it, whether you're
+reading, writing or appending. do that by using the .close command on the 
+file object. i always write my close command whenever i write the open command,
+and then add necessary code in between the two statements. 
+
+a good practice when opening files is using the 'with' statement. 
+write 'with' then the open command, then the word 'as' and a variable name for 
+your file object. then you can put all of your file-related code in a following
+block, and it'll close the file for you automatically. 
+
+we've been working with looping statements in this unit, but the with statement
+is just like a regular block, and only runs once, so don't mix things up. 
+
+once again, you don't need to manually close the file, because the 'with' statement does that
+for you. even if your code inside of the block crashes.
+
+so how do we get data out from the file? there are a few options we can use.
+first, let's use the .read command on the file object, and then print that out.
+
+in the terminal you can see it took everything from the file and put it into 
+one variable. it also printed it on two lines, which is interesting, because 
+we only had one print statement. 
+
+let's see what's causing this.
+
+we can use the command repr, which will tell you the string representation for 
+any object. if we use this on a string, it'll take out any formatting, and show
+what's really being stored.
+
+when we print that out, you can see how it's stored in one string
+with this backslash n in between the two lines. that's called an escape 
+character, which you can use to properly print certain special symbols and 
+characters. backslash n means new line.
+
+if you think about it, since a string is just a list of letters, a text file 
+is just a giant list of letters, and every line break in that file is stored
+as a new line character. 
+
+when i change data.txt to 5 line breaks and re-run this program, it prints out 
+5 new line characters. remember that that's how line breaks are made for later on.
+
+in any case, the data is all together when you use the 'read' command.
+it will put the entire file into one variable.
+that can make things difficult if you're trying to extract data to 
+preform operations on.  
+
+for that, you can use the 'read lines' command. that takes every line of the
+file and separates them into a list. this is what it looks like printed out.
+
+[
+
+lines = file.readlines()
+
+print(lines)
+
+]
+
+let's say we want to capitalize each line in the file, and then print that back 
+out. 
+
+we can say 'for every line in lines, print line.capitalize() 
+
+in the terminal you can see it did print out capitalized, but for some reason 
+we have an extra space. if i print the representation of each line, you can 
+see it still has that new line character. using the strip command will get 
+rid of that. 
+
+[
+for line in lines:
+    print( line.capitalize() )
+
+    print( repr(line.capitalize()) )
+[then] 
+    print( line.strip().capitalize() )
+]
+
+if you're looping over each line, you can actually just use a for loop 
+on the file object itself. 
+
+[
+    for line in file:
+]
+
+[run]
+
+if you want to read one line at a time, there's the read line command you 
+can use. 
+
+[
+
+line_1 = file.readline()
+line_2 = file.readline()
+
+]
+
+so that's how you can read from a file. let's switch the mode to writing. 
+use the letter 'w'. 
+
+using write mode creates a file with the name you specify. if there's already
+a file with the name you give, python will delete the old file, and create a new
+one. I'll keep the name 'data.txt' to show how it deletes the old file. 
+
+when in write mode, all of the read commands become unusable, so you have to use
+write commands. 
+
+dot write will add what you give it into the file. calling the write command 
+more than once just adds more onto the file. 
+
+if you want to start a new line, you have to use the newline escape character
+to make one.
+
+the write lines command is just like the opposite of the read lines command. 
+you can use it to write an entire list of strings at once.
+
+unfortunately, it doesn't automatically insert newline characters after
+every item in the list, so an easier way would be to just use a for loop,
+and then print the item plus a newline character, like this.
+
+[
+
+for line in lines:
+    my_file.write(line + '\n')
+
+]
+
+use 'a' in the open command to use append mode. 
+append mode is very similar to write mode, except instead of deleting a 
+file if it exists, it adds on to the end of it. 
+it will also create a file with the name you specify if it doesn't already exist. 
+you can use both write commands in append mode.
+
+
+
+- update mode is what it sound's like. you can both read from a file
+and write to it so both read commands and write commands work in this
+mode. reading will start from the beginning and writing will start from
+the end. 
+
+
+okay, now that we have an idea of how file objects work, let's go over a few 
+examples. 
+
+in my data file, i have a list of 100 numbers, separated onto different lines. 
+this program finds the total of all the numbers, as well as the largest and 
+smallest numbers in the file. then i print out those three numbers in the 
+terminal.
+
+I do this with a for loop that iterates over the entire file. 
+Since the number is returned as a string, i first cast it to a number,
+then i append it to a list and add it to a total. 
+
+when i'm done accessing the file and the with statement ends, I find 
+the largest and smallest numbers with the min and max commands, and
+then i print everything out. in this case i used read mode because 
+i didn't need to add anything, or create any files. nice.
+
+numbers = []
+total = 0
+
+with open('data.txt', 'r') as my_file:
+    for line in my_file:
+        number = int(line)
+        numbers.append(number)
+        total += number
+
+average = total / len(numbers)
+largest = max(numbers)
+smallest = min(numbers)
+
+print('The total of all numbers is', total)
+print('The average of all numbers is', average)
+print('The largest number is', largest)
+print('The smallest number is', smallest)
+
+I actually generated that list of numbers with a program I wrote. 
+it uses the random module and a for loop that counts to 100. 
+inside of the for loop, i generate a random number between 1 and
+5000, cast it to a 
+string, add a new line character, and then write it to the file.
+it's that simple. 
+
+i used write mode to create the file, because i didn't need to read
+or modify anything. 
+
+
+- file object 
+    - open()
+    - file.close()
+    - with statement
+    - file paths
+        - easiest is put in same folder as python script
+        - goes by where terminal runs
+        - absolute paths
+            - Drive:folder\folder\file.extension windows
+            - Folder/folder.file.extension mac
+        - relative paths
+
+- read
+    - 'r'
+    - read()
+    - readlines()
+    - readline()
+    - for line in file:
+
+- write
+    - 'w'
+    - creates a file
+    - deletes a file if it's already there
+    - write()
+    - writelines()
+
+- append
+    - 'a'
+    - adds to file
+    - creates one if not there
+    - uses write() and writelines()
+
+- seek
+- tell
+- fix read command
+
+- headless program example
+    - input and output file, no terminal output!
+
+- csv example?
+
+- str.format() ?
+
+- str.strip() 
+
+- repr() 
