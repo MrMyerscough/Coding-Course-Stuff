@@ -15,7 +15,7 @@ inside i'll just type a few words.
 
 [
 
-coding is fun!
+coding is fun! 
 python is great!
 
 ]
@@ -49,8 +49,9 @@ block, and it'll close the file for you automatically.
 we've been working with looping statements in this unit, but the with statement
 is just like a regular block, and only runs once, so don't mix things up. 
 
-once again, you don't need to manually close the file, because the 'with' statement does that
-for you. even if your code inside of the block crashes.
+once again, you don't need to manually close the file, because the 'with' statement 
+does that for you. 
+even if your code inside of the block crashes.
 
 so how do we get data out from the file? there are a few options we can use.
 first, let's use the .read command on the file object, and then print that out.
@@ -63,7 +64,7 @@ let's see what's causing this.
 
 we can use the command repr, which will tell you the string representation for 
 any object. if we use this on a string, it'll take out any formatting, and show
-what's really being stored.
+what's really being stored inside of the variable.
 
 when we print that out, you can see how it's stored in one string
 with this backslash n in between the two lines. that's called an escape 
@@ -115,6 +116,12 @@ for line in lines:
 if you're looping over each line, you can actually just use a for loop 
 on the file object itself. 
 
+just like lists, the file object is iterable, or able to
+be stepped through, piece by piece. 
+
+therefore, we can say 'for every line in my_file, print out that line' 
+or whatever you want to preform 
+
 [
     for line in file:
 ]
@@ -123,6 +130,8 @@ on the file object itself.
 
 if you want to read one line at a time, there's the read line command you 
 can use. 
+
+calling this repeatedly will just return the next line down the file. 
 
 [
 
@@ -152,7 +161,7 @@ you can use it to write an entire list of strings at once.
 
 unfortunately, it doesn't automatically insert newline characters after
 every item in the list, so an easier way would be to just use a for loop,
-and then print the item plus a newline character, like this.
+and then write the item plus a newline character, like this.
 
 [
 
@@ -188,6 +197,7 @@ Since the number is returned as a string, i first cast it to a number,
 then i append it to a list and add it to a total. 
 
 when i'm done accessing the file and the with statement ends, I find 
+the average by dividing the total by the length of the list,
 the largest and smallest numbers with the min and max commands, and
 then i print everything out. in this case i used read mode because 
 i didn't need to add anything, or create any files. nice.
@@ -210,6 +220,17 @@ print('The average of all numbers is', average)
 print('The largest number is', largest)
 print('The smallest number is', smallest)
 
+
+in fact, let's make this program not use the terminal at all.
+instead of printing, let's create a new file called 'output.txt',
+set the mode to write, and change all of these prints to write commands.
+
+when i run this program, a new file appears in our working folder,
+and nothing shows up in the terminal. instead, out output was 
+written inside of the text file. cool!
+
+
+
 I actually generated that list of numbers with a program I wrote. 
 it uses the random module and a for loop that counts to 100. 
 inside of the for loop, i generate a random number between 1 and
@@ -219,6 +240,13 @@ it's that simple.
 
 i used write mode to create the file, because i didn't need to read
 or modify anything. 
+
+
+now that you have an idea of how file IO works in python, give it a 
+try yourself and solve some new problems.
+
+see ya, code dog out.
+
 
 
 - file object 
