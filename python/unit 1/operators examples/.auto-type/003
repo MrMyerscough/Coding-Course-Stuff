@@ -1,0 +1,5 @@
+file: operators examples.py
+---
+number = 32.16239
+
+print( f'' )

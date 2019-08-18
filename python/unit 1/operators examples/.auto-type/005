@@ -1,0 +1,5 @@
+file: operators examples.py
+---
+name = 'dog'
+
+print( f"code {name} out")

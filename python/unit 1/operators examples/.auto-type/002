@@ -1,0 +1,15 @@
+file: operators.py
+---
+number = number + 5
+
+number = number - 5
+
+number = number * 2
+
+number = number / 3
+
+number = number ** 4
+
+number = number % 2
+
+number = number // 12
