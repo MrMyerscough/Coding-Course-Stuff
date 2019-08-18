@@ -247,7 +247,13 @@ try yourself and solve some new problems.
 
 see ya, code dog out.
 
-
+import random 
+# open text file in write mode
+with open('data.txt', 'w') as my_file:
+    # generate and write random numbers
+    for i in range(100):
+        random_number = random.randint(1,5000)
+        my_file.write( str(random_number) + '\n' )
 
 - file object 
     - open()
