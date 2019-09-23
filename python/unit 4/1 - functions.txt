@@ -5,3 +5,374 @@
 -return
 -default parameters 
 -reference vs return 
+
+
+
+today we're going to learn how to make functions in python.
+
+so what is a function?
+
+well, in a nutshell, a function is making your very own command, just like the ones built into python
+
+so far we've learned a lot of commands in python
+
+print
+input
+strip()
+upper()
+lower()
+replace()
+len()
+type()
+int()
+float()
+str()
+bool()
+capitalize()
+
+
+you create your own commands out of the ones that are already built in. 
+
+let's jump in 
+
+to write your own function, type 'def', short for define. follow that with a name, and then some parenthesis and a colon.
+
+name your function like you would name a variable, all lowercase, without special characters or numbers, and using underscores where needed
+
+name it after what it does just like a variable is named after what it holds
+
+then we can start a block on the following lines. 
+
+let's make our command do something simple. I'll just have it print some stuff out
+
+[
+
+def say_hi():
+    print('hi there!')
+    print('hello!')
+
+]
+
+cool! we just made a function. so how do you run it? 
+
+if you try running the program as it is right now, nothing will happen. 
+
+that's because we defined it, but never called it. 
+
+to do that, just call it just like a regular command. we learned that in unit one.
+
+now when we run the program, it actually does something. 
+you can see it printed in the terminal like we expected.
+
+i can also call the command as many times as i want, and the function will just run again and again
+
+one thing you should know is that you can't call a function before you define it. if I try to do that, we get 'Name Error: name say_hi is not defined' 
+
+defining may /seem/ like it's doing nothing, but it's still an instruction, 
+and it puts the new command into memory, so you can call it. 
+
+okay, now we can make a basic function, but why would you ever write a function in the first place? 
+
+after all, we can have a shorter program if we just removed the function
+and ran the commands themselves. wouldn't that be simpler? 
+
+for this example, you'd be right. there's almost no reason to use 
+functions here. but for larger programs with complex code, 
+it'll start to make a lot more sense. 
+
+you'll see in just a minute. 
+
+okay so we made a command! pretty cool and all, but don't some commands take
+data? 
+
+look at the print command. it takes a string as it's input data. 
+
+and what about returning data?
+
+the /input/ command not only takes data in, but it also gives data back when it
+finishes.
+
+
+             data in v
+input('what is your age?')
+    -> '19'
+
+
+we can make our own functions do the same.
+
+let's change this function by making it say hi to a specific person, and we'll do that by taking /in/ a name when you call the function. 
+
+so if we said say_hi given john, the output should be something like, hi there john!
+
+[
+
+animation of 
+command             expected output
+say_hi('john')      hi there, john!
+                    hello!
+
+]
+
+to achieve this, place a variable name inside of the parenthesis in your definition.
+this variable will hold whatever value is given into the function when it's called, 
+and you can use that value inside of your code block. 
+
+for this case, we want to give the command a person's name, so i'll call the variable "name".
+
+then we can print with it. 
+
+this part is cool. see this red squiggle telling me there's an error?
+that's the built in code checker, called the python linter.
+
+
+[ animate ]
+
+it says: No value for argument 'name' in function call
+or basically, hey! this command takes in a name, and you forgot to give it one. 
+
+that's because it's smart enough to read the definition and find any predictable errors,
+even before you run the program. Awesome! thank you linter. 
+
+okay, let's try the program with a value for name. 
+it runs as expected. nice.
+
+and by the way, the value you define to go INTO a function is called a parameter, 
+and the actual data you give the command when you call it is called an argument. 
+in this case the 'name' is the parameter, and the data 'dog' is the argument
+in this case the 'name' is the parameter, and the data 'john' is the argument
+
+[animate that]
+
+okay so we can GIVE data into the function, how do we RETURN data back?
+
+lets start with a new function.
+
+back in unit one we made a program that solved Pythagorean theorem problems
+let's recreate that program, but this time using a function.
+
+[animation flash back?]
+
+(and if you don't know, that's used to find the missing side of a right-triangle)
+
+i'll call the function 'find_hyp' because it'll find the hypotenuse. 
+then i'll define the function to take in the two legs of the triangle, a and b. 
+to define a function with more than one parameter, use commas to separate them.
+
+also the order matters. when I call this function, the first argument I give it will
+be stored in the variable 'a', and the second in variable 'b'. 
+
+okay, now I can use those in the code block. here i square them, add them together, and then take the square root of it to find the missing side. if you haven't yet taken geometry, that was just following the steps of the equation.
+
+okay to return this value, simply type the keyword 'return' then the variable or value.
+
+let's test it out by printing the answer. 
+
+cool! it worked. let's call it again with different numbers. 
+
+now do you see how functions can be useful? 
+
+instead of typing out the necessary operations 3 separate times, 
+I just wrote the pattern /once/ inside of my function, and called it three times 
+with different values. 
+
+if you start using functions, you'll save
+yourself a lot of time and energy.
+
+there also are a few more ways to use the return instruction.
+
+first, you can return different things using conditions. 
+
+for example, let's say we want to write a function that will return what kind
+of vehicle to use depending on the number of people in a group. 
+
+so we can say IF the number of people is less than or equal to 5, return car
+if the number is between 5 and 7, use a van. up to 30 in a bus, and 
+if theres more beyond that, return 'train'
+
+def which_vehicle(number_people):
+    if number_people <= 5:
+        return 'car'
+    elif number_people <= 7:
+        return 'van'
+    elif number_people <= 30:
+        return 'bus'
+    else: 
+        return 'train'
+
+let's test this out
+
+the one thing you should look out for is IF you return a value
+in your function, it should ALWAYS return a value. 
+
+in this program, let's say we deleted the else block and did nothing after 30, no returning.
+when we go to use that command in a program, it can cause errors. 
+
+you want to keep things consistent, so you can expect what to get from a function.
+
+//////the last thing we'll learn about is a practice called early returning. 
+
+one last rule with functions is that using the 'return' instruction always 
+makes the function come to a stop.
+
+take a look at this example. it prints something, then returns, then tries to print again. 
+if we call it, although we're not doing anything with the returned value, you can see that we only get one print. 
+that's because after it returns, the program 
+moves on and any code left in the function doesn't run. the linter even has our back again! 
+if i hover over this squiggle it says 'unreachable code'
+
+
+def get():
+    print('before')
+    return 1
+    print('after')
+
+get()
+
+in fact, when using the return instruction, you don't even need to return a value.
+you can just use it like a 'stop' instruction, which can be useful. 
+
+/// 
+
+early returning means to return a value or exit the function as quickly as possible
+
+here's one example
+
+def 
+
+///
+ 
+
+okay, now that you have an idea of the different ways you can use functions, 
+let's look at an example program that uses one. 
+
+this program builds an order at a coffee shop using a series of menus. 
+
+first, let's see it in action, then we'll look into how it was written. 
+
+welcome to the coffee shop! i think i want a latte right now. 
+out of the flavors ill choose Mocha. let's add almond milk,
+and whipped cream on top. finally i'll get a size medium.
+
+here is prints out my final order. 
+
+so how does it work?
+
+first the program starts out with a bunch of lists. they hold all
+of the different menu options, according to drinks, flavors, milks, and so on.
+
+then we have a function definition, one called 'menu'. looks like it takes 
+in a list as a parameter, then it does some looping printing and returning. 
+
+below it is where the real program starts. everything up to this point is just 
+laying the groundwork. you can see that it's pretty simple. 
+
+there are variables for each drink option, and those values come from
+the menu function. 
+
+that function takes in a list and returns the user's 
+choice from that list. 
+
+after that, the program prints out the entire order, and then it comes to a stop.
+
+the use of a function made this program super simple and easy to understand. 
+instead of writing this code five times, it was only written once and then
+called with different data. 
+
+this example is really plain, but you can probably come up with ways 
+to add more to it. For example, you could add a price to each option
+and then tell the user their total cost once they've built their order. 
+
+
+
+drinks = [
+    'Coffee',
+    'Iced Coffee',
+    'Frozen Coffee',
+    'Macchiato',
+    'Cappuccino',
+    'Latte'
+]
+
+flavors = [
+    'Vanilla',
+    'Mocha',
+    'Caramel',
+    'No Flavor'
+]
+
+milks = [
+    '2% Milk',
+    'Skim Milk',
+    'Whole Milk',
+    'Nonfat Milk',
+    'Almond Milk',
+]
+
+additions = [
+    'Sugar',
+    'Espresso',
+    'Whipped Cream',
+]
+
+sizes = [
+    'Small',
+    'Medium',
+    'Large',
+    'Extra Large'
+]
+
+
+
+def menu(menu_list):
+    # print the items
+    index = 1
+    for item in menu_list:
+        print(f'{index} - {item}')
+        index += 1
+    # get user's choice
+    choice = input('choose an option:')
+    # return the list option
+    return menu_list[int(choice) - 1]
+        
+
+
+print('welcome to the coffee shop')
+
+drink = menu(drinks)
+
+flavor = menu(flavors)
+
+milk = menu(milks)
+
+addition = menu(additions)
+
+size = menu(sizes)
+
+print()
+print("Here's your order: ")
+print(drink)
+print(flavor)
+print(milk)
+print(addition)
+print(size)
+
+
+** DEFINE functions before you CALL them
+
+** early returns! 
+
+
+alright, now that you know how to make your very own commands in python, go ahead and make 
+bigger and better programs, that are hopefully easier to understand and quicker to make. 
+a lot more fun stuff is in the units to come. 
+
+in the next video we'll learn about additional helpful things you can use with functions. 
+
+okay, that's all for now. code dog out. 
+
+2nd vid:
+-docs
+-parameter types
+-overloading
+-None data type
+-lists special cases
