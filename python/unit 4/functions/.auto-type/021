@@ -1,0 +1,6 @@
+file: functions.py
+line: 2
+col: 5
+---
+if number_people <= 5:
+        return 'car'

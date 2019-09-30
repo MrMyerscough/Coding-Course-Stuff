@@ -1,0 +1,7 @@
+file: functions.py
+line: 9
+col: 23
+---
+
+
+print()← which_vehicle() ←←6←←←←←←←←←←←←←←←f'you should take a {→→→→→→→→→→→→→→→→}'

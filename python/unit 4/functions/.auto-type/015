@@ -1,0 +1,7 @@
+file: functions.py
+line: 1
+col: 18
+---
+→→
+    c = a ** 2 + b ** 2
+    c = c ** 0.5

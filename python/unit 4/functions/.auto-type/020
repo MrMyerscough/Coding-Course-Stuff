@@ -1,0 +1,4 @@
+file: functions.py
+---
+def which_vehicle(number_people):
+    

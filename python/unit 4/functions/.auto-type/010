@@ -1,0 +1,6 @@
+file: functions.py
+line: 1
+col: 16
+---
+↓←←←←←f→→→→→→→→→ {name}↓↓
+say_hi()

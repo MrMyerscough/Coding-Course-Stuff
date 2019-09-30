@@ -1,0 +1,8 @@
+file: functions.py
+---
+def get():
+    print('before')
+    return 1
+    print('after')
+
+get()

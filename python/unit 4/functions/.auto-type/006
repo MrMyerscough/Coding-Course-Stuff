@@ -1,0 +1,7 @@
+file: functions.py
+line: 3
+col: 20
+---
+
+
+say_hi()

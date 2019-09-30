@@ -1,0 +1,11 @@
+file: functions.py
+line: 3
+col: 21
+---
+
+    elif number_people <= 7:
+        return 'van'
+    elif number_people <= 30:
+        return 'bus'
+    else: 
+        return 'train'

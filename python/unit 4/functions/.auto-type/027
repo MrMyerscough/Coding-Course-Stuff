@@ -1,0 +1,4 @@
+file: functions.py
+---
+def code_dog_status():
+    return 'out'

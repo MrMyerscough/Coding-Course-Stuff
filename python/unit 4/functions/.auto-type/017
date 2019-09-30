@@ -1,0 +1,9 @@
+file: functions.py
+line: 4
+col: 13
+---
+
+
+answer = find_hyp(3, 4)
+
+print(answer)

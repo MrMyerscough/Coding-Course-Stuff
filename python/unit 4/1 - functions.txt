@@ -16,19 +16,19 @@ well, in a nutshell, a function is making your very own command, just like the o
 
 so far we've learned a lot of commands in python
 
-print
-input
-strip()
-upper()
-lower()
-replace()
+print()
+input()
 len()
 type()
 int()
 float()
 str()
 bool()
-capitalize()
+.capitalize()
+.strip()
+.upper()
+.lower()
+.replace()
 
 
 you create your own commands out of the ones that are already built in. 
@@ -230,6 +230,7 @@ get()
 
 in fact, when using the return instruction, you don't even need to return a value.
 you can just use it like a 'stop' instruction, which can be useful. 
+if i get rid of the return value, the program still works
 
 /// 
 

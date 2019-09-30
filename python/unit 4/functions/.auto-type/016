@@ -1,0 +1,6 @@
+file: functions.py
+line: 3
+col: 17
+---
+
+    return c
