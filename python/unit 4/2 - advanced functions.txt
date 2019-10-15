@@ -1,0 +1,301 @@
+positional vs keyword arguments
+default values
+arbitrary arguments
+parameter types
+docstrings
+lists special cases
+functions are reusable 
+
+-recursion  XXX
+
+
+----------------------
+
+
+
+in this video, we're going to learn about some features you can add on to functions. 
+
+last time we looked at how to build basic functions, so go watch that if you haven't yet.
+
+and for this video, since there's a lot to go over, we'll be using some generic examples 
+that don't have an actual purpose, but the concepts work on any functions you write. 
+
+let's start.
+
+so i have this function and it needs a few parameters. when i go to call that function,
+as i type, the *intellisense* feature in VS code helps to keep track of the values, but sometimes it can
+get confusing.
+
+
+def function(arg_one, arg_two, arg_three, arg_four, arg_five):
+    return
+
+function(12, 67, 324, 7, 34)
+
+
+like we learned in the last video, when you call a function and give it values like normal, 
+the order of arguments matters. the first argument corresponds to the first parameter, 
+the second to the second, and so on. these are called positional arguments, because it depends
+on the position.
+
+instead of positional arguments, you can also give data to functions using || keywords. ||
+instead of placing 324 in the third position, we can say arg_three equals 324, arg_1 
+equals 12, and so on. these are called keyword arguments.
+
+so you can organize your arguments how you want if you type the parameter name,
+an equals sign, and then the value. 
+
+you can start out calling a function with positional arguments, and then end with keyword arguments. 
+
+you still need to supply all of the arguments, but you can switch the order this way.
+
+we'll touch on this again in a minute. 
+
+----------------------
+moving on.
+
+look at the following two functions. they're pretty similar.
+they both take in an amount of hours and return return a pay amount. 
+in the first function, you specify the pay rate, and in the second,
+it uses US national minimum wage instead. 
+
+def pay(hours, rate):
+    return hours * rate
+
+def pay_minimum(hours):
+    return hours * 7.25
+
+what if we could combine them into one function, where if you don't supply
+a pay rate, it just defaults to using minimum wage?
+
+you can do that using || default parameter values ||
+
+here's how. just put an equals sign after the parameter you want and then
+the default value. now we can call it like normal, with hours and a rate, 
+or we can give just the hours and it'll fill in 7.5 for the rate. 
+
+let's test it out
+
+print( pay(10, 9.5) )
+print( pay(10) )
+
+you can set as many default values as you want, but they need to be the last
+parameters in the function definition. if you try to set a default value
+then a regular parameter, you'll get an error. 
+
+----------------------
+
+
+next up, let's look at the print command. 
+it's written pretty interestingly. 
+
+we know that the print command will take as many arguments as you want, 
+so how do you define a function to take in an unlimited amount of arguments?
+
+the answer is arbitrary arguments. 
+to define arbitrary arguments, just put an asterisk before the parameter name, like this.
+
+argument_counter(*args):
+    return
+
+now all of the arguments will be put into a sequence with that name,
+so you can use all of the sequence operators, like for loops.
+
+def argument_counter(*args):
+    length = len(args)
+    print(f'there are {length} arguments.')
+    print('the first argument is', args[0])
+    print('here are the rest:')
+    for arg in args[1:]:
+        print(arg)
+
+let's test this one out.
+
+argument_counter(6, 3, 7, 'hello', True)
+
+again, you can also use regular arguments first and then arbitrary arguments,
+but the arbitrary indicator needs to go last
+
+-------------------
+
+next up we have parameter types.
+
+let's say you have a function and it takes in a parameter, but you know what type you want it to be.
+for example, if you're doing something with math, you know that the parameter should be a number type.
+
+you can specify what type a parameter should be by using a colon and then the type class, like this.
+
+def add(number, number2):
+    return number + 12
+
+def add(number:float, number2:float):
+    return number + 12
+
+def list_printer(collection:list):
+    for item in collection:
+        print(item)
+
+remember that the types are int, float, str, bool, and you can also say list if you want to specify that
+it should be given a list.
+
+so now when you go to call these functions, VS Code will display what type the argument should be,
+and if you type in the wrong one, the python linter gives you an error. 
+
+add(24, 653)
+
+list_printer([2, 3, 6, 3, 6, 2])
+
+add('hello', True)
+
+list_printer(12)
+
+
+----------------------
+
+let's talk about documentation. 
+
+up until now, the only option to describe what goes on in our 
+functions is to use comments. however, there's a professional way built into
+python for you to describe your functions. they're called docstrings.
+
+def add(number, number2):
+    return number + number2
+
+to add a docstring to this function, put a set of triple double quotes, on
+the first line of your code block, like this. 
+then, inside of the quotes, say what your command does. 
+
+For this example, since it just adds two numbers, i'll say "Return the sum of two numbers." 
+
+you can also make the docstring across multiple lines, and give extra information about
+the arguments, return value, side effects, and other details.
+
+for the full guide on docstrings, check the official Python developer's guide on 
+python.org. but for now, a simple description is good enough for our uses. 
+
+def add(number, number2):
+    """Return the sum of two numbers."""
+    return number + number2
+
+
+def add(number, number2):
+    """Return the sum of two numbers.
+    
+    Keyword arguments:
+    number -- the first number to total
+    number2 -- the second number to total
+    """
+    return number + number2
+
+
+-------------------
+
+
+finally, there are some special cases and uses for functions that you should know.
+these aren't necessarily new concepts, but they should probably be noted for the future.
+
+when we first learned about lists, we called them 'reference data types'
+
+or basically, when you set a variable equal to a list, it's really just storing a 
+reference to that list, not the actual value.
+
+x = [1,2,3]
+
+y = x
+
+y[0] = 30
+
+print(x)
+
+you can see that in this example, when i set y equal to x, modifying y 
+causes x to also change. 
+
+we learned to get around this, use the .copy() command.
+
+well since lists are reference types, when you go to use them with functions
+you also get some funny behavior.
+
+look at the following function. it takes in a list, which, by the way, i like to name
+the parameter collection because typing just 'list' confuses things because it's 
+the name of a python class - anyways, this function doubles the value of each item 
+in the list, and then returns it. it does this by using a for loop on the range
+of the list - remember back to unit 3. 
+
+so i have this list x, i call the double function given that list, and then i set
+that to y. let's see what happens when we print both x and y.
+
+def double(collection):
+    for index in range(len(collection)):
+        collection[index] = collection[index] * 2
+    return collection
+
+x = [1,2,3]
+
+y = double(x)
+
+print(x)
+print(y)
+
+
+just like with variables, the value ends up being the same. 
+that's because the parameter collection, points to the value of x.
+again, we can fix this by using the .copy command and creating a new
+variable. 
+
+in general, if you want to write a function that modifies a list, 
+have it copy the list and return a new one. that makes your code clearer
+to understand. 
+
+
+
+--------------------
+
+okay
+
+so let's combine a few of these concepts. look at the following function. 
+
+def alphabetize(collection:list, capitalize=False, reverse_alphabetize=False):
+    """Return an alphabetized list given an unordered one."""
+    new_collection = collection.copy()
+    if capitalize:
+        for item in len(new_collection):
+            new_collection[item] = new_collection[item].capitalize()
+    if reverse_alphabetize:
+        new_collection.reverse()
+    new_collection.sort()
+    return new_collection
+
+
+this function takes in a list first, and has two other parameters with default values.
+the purpose of this function is to alphabetize a list, and the two default values are 
+options of the function that modify how it behaves. 
+
+the first option is whether or not each item should be capitalized. you can see that
+there's a conditional that checks for that option here. by default, it's set to off.
+
+the second option is whether or not to alphabetize in reverse. by default it's also set to off.
+
+you can also see that there's proper documentation so when you start typing the function
+call, intellisense gives you a description. and finally, since the function uses a 
+list, it copied the parameter into a new variable before returning. cool. 
+
+i'd say this function has the code dog seal of approval. 
+
+----------------------
+
+
+lastly, one of the ways that functions are really useful is that they can be reused
+between programs. because they solve problems with patterns, if you write a function
+once, it can be used a countless number of times in different programs. 
+
+in the next video, we'll learn how to separate a python program into different files
+and then you'll know pretty much all of what you can do with functions. 
+
+in the next unit we'll talk about objects, which is the last big powerful tool you 
+can use to create programs. 
+
+you might've not realized it, but you're already far down the path to learning python. 
+
+keep it up, and keep practicing. 
+
+code dog out. 
