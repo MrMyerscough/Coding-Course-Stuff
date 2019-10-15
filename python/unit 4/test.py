@@ -112,38 +112,62 @@ sizes = [
 
 
 
-def menu(menu_list):
-    index = 1
-    for item in menu_list:
-        print(f'{index} - {item}')
-        index += 1
-    choice = input('choose an option:')
-    return menu_list[int(choice) - 1]
+# def menu(menu_list):
+#     index = 1
+#     for item in menu_list:
+#         print(f'{index} - {item}')
+#         index += 1
+#     choice = input('choose an option:')
+#     return menu_list[int(choice) - 1]
         
 
 
-print('welcome to the coffee shop')
+# print('welcome to the coffee shop')
 
-drink = menu(drinks)
+# drink = menu(drinks)
 
-flavor = menu(flavors)
+# flavor = menu(flavors)
 
-milk = menu(milks)
+# milk = menu(milks)
 
-addition = menu(additions)
+# addition = menu(additions)
 
-size = menu(sizes)
+# size = menu(sizes)
 
-print()
-print("Here's your order: ")
-print(drink)
-print(flavor)
-print(milk)
-print(addition)
-print(size)
+# print()
+# print("Here's your order: ")
+# print(drink)
+# print(flavor)
+# print(milk)
+# print(addition)
+# print(size)
 
 
+# def find_average(num_list):
+#     average = 0
+#     for num in num_list:
+#         average += num
+#     average /= len(num_list)
+#     return average
 
+# x = find_average([1, 6, 44])
+
+# print(x)
+
+# def scan(text, key):
+#     occurrences = 0
+#     for character in text:
+#         if character == key:
+#             occurrences += 1
+#     return occurrences 
+
+# print( scan('spooky skeletons', 's') )
+
+
+def days_to_seconds(num_days):
+    return num_days * 24 * 60 * 60
+
+days_to_seconds(2)
 
 
 
@@ -214,3 +238,33 @@ d) the program will error
 # x = say_hi('dog')
 
 # print(x)
+
+
+
+def function(name_list):
+    for name in name_list:
+        print(name.capitalize())
+
+
+def find_average(num_list):
+    average = 0
+    for num in num_list:
+        average += num
+    average /= len(num_list)
+    return average
+
+x = find_average([1, 6, 44])
+print(x)
+
+
+
+def scan(text, key):
+    occurrences = 0
+    for character in text:
+        if character == key:
+            occurrences += 1
+    return occurrences 
+
+print( scan('spooky skeletons', 's') )
+
+

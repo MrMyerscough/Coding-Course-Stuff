@@ -377,3 +377,25 @@ okay, that's all for now. code dog out.
 -overloading
 -None data type
 -lists special cases
+-recursion 
+-functions are reusable 
+
+4.1 lab:
+-write a function that converts miles to kilometers
+-write a function that converts kilometers to miles
+-write a function that converts between
+
+
+4.2 lab:
+-write a function that takes in a list of songs from a text file
+and returns as list.
+-write a function that randomizes the list
+-write a function that alphabetizes the list
+-write a function that picks a random song
+
+
+unit 4 project:
+
+A SHOP !!!!
+-customize names, products, prices
+-buy sell 
