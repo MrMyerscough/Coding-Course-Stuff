@@ -117,6 +117,9 @@ again, you can also use regular arguments first and then arbitrary arguments,
 but the arbitrary indicator needs to go last
 
 -------------------
+XXXXXXXXXXXXXXXXXXX 
+REMOVED
+
 
 next up we have parameter types.
 
@@ -167,6 +170,12 @@ then, inside of the quotes, say what your command does.
 
 For this example, since it just adds two numbers, i'll say "Return the sum of two numbers." 
 
+now when you go to call this function, or hover over a call, intellisense built into VS 
+code gives you the documentation of that function.
+
+you can also use the help() command, given the command name, to have the program display 
+the documentation
+
 you can also make the docstring across multiple lines, and give extra information about
 the arguments, return value, side effects, and other details.
 
@@ -205,6 +214,7 @@ y = x
 
 y[0] = 30
 
+print(y)
 print(x)
 
 you can see that in this example, when i set y equal to x, modifying y 
