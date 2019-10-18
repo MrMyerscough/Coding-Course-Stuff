@@ -1,0 +1,55 @@
+at this point, we've learned how to make functions and now it's time to start using them 
+in our python programs. 
+
+once you start writing them you'll want to reuse your functions between your different 
+programs. the easiest way to do that is through modules.
+
+a module in python is just a file with python definitions and statements, so we've actually
+been writing them all along!
+
+to create a new module, make a python file like normal. the module name is the same as
+the file name, excluding the .py extension. 
+
+i'll paste some functions i've already written in here. you can also store variables 
+in modules to use them in other programs. 
+
+now, these functions are just helpers that will allow me to complete my main program.
+
+a good way to think of it is to store your main code and helper code separately. 
+your main code solves your bigger, main problem or task, and the helper functions 
+complete the smaller tasks that make up the big one. 
+
+you should also group similar functions together in a module, so you might have one module 
+for math functions, one for lists, and one for strings.
+
+you'll learn more about how to properly structure your code as you keep moving forward, 
+but try to keep these tips in mind when creating new programs. 
+
+okay, so let's go to our main python file. to import the module, type import and then the name.
+easy. 
+
+now to call your functions from that module, type the module name dot the command name or variable name.
+like this.
+
+it's just like using the random module and the randint command stored there. 
+
+if you only want to import specific functions or variables, type, from module import and then 
+the names of the specific things you want to import, separated with commas. 
+
+this way it's as if we defined the functions in our current file, and we can call the commands
+without stating the module. 
+
+if you want to import all of the definitions like this, say from module import all, 
+with an asterisk 
+
+if you don't like the name of a module, you can rename it when importing. 
+type import module as and then the local name you want to call it.
+
+you can also import individual definitions like this. 
+
+now you can separate your python programs into different files, and that will 
+make things a lot easier to reuse your code too. 
+
+that's all for now.
+
+code dog out.

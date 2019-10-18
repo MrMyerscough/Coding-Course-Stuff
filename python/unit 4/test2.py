@@ -1,10 +1,3 @@
-def function(arg_one, arg_two, arg_three, arg_four, arg_five):
-    print(arg_one)
-    print(arg_two)
-    print(arg_three)
-    print(arg_four)
-    print(arg_five)
-    return
 
 # function(12, 67, 324, 7, 34)
 
@@ -49,7 +42,7 @@ x = [1,2,3]
 y = double(x)
 
 
-def alphabetize(collection:list, capitalize=False, reverse_alphabetize=False):
+def alphabetize(collection:list, capitalize=False, reverse_alphabetize=False) -> list:
     """Return an alphabetized list given an unordered one."""
     new_collection = collection.copy()
 
@@ -68,4 +61,15 @@ x = ['dog', 'cat', 'tiger', 'hamster', 'otter']
 
 y = alphabetize(x, reverse_alphabetize=True)
 
-print(y)
+# print(y)
+
+
+def function(a, b, *c, add):
+    print(c[1])
+
+# function(1,2,3,4,5)
+
+import test
+
+print(test.x)
+print(test.drinks)

@@ -81,6 +81,7 @@ drinks = [
     'Cappuccino',
     'Latte'
 ]
+x = 12
 
 flavors = [
     'Vanilla',
