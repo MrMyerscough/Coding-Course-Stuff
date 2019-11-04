@@ -44,6 +44,14 @@ def random_item(items):
 x = random_item(['cat', 'dog', 'bird', 'hamster'])
 print(x)
 
+# OR
+
+def random_item2(items):
+    return random.choice(items)
+
+x = random_item2(['cat', 'dog', 'bird', 'hamster'])
+print(x)
+
 # Task 4: Create a function that takes in an age as a parameter. If
 # the entered value is less than 18 return 'minor'. Else, if the entered
 # value is less than 65 return 'adult'. Else, return 'senior'. Test out
