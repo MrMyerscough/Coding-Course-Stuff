@@ -1,0 +1,7 @@
+file: classes.py
+line: 3
+col: 25
+---
+↓↓↓↓↓⇥←←'buddy'→→
+dog2 = Dog()←'scooby'→ ↓↓⇥
+print(dog2.name)

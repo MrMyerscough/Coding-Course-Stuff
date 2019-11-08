@@ -1,0 +1,236 @@
+so we know that objects are values and functions grouped together. data with built in functionality.
+so let's learn how to write our own. 
+
+// and a bit of a fair warning, we're not going to go over every single thing 
+you can do with objects in this unit. we're keeping it pretty basic for now, 
+but you can always explore the deeper functionality of objects on your own.
+
+let's start
+
+to create a new type of object, you need to make a new class. 
+a class is like the template for your object or the definition. 
+it says what an object SHOULD hold, and what an object can do, 
+but it doesn't hold all of the specific object data itself. 
+
+// MAYBE leave out
+
+more on this in a minute.
+
+
+to create a class, type the keyword 'class' and then the name you want to call it.
+the convention for naming classes is different than variables and functions. Start with a capital letter,
+and instead of underscores, capitalize the first letter of the next word. like this.
+that's usually called Camel Case. 
+
+[bullet]
+
+
+i'll call this class Dog.
+
+then follow the name with a colon, and, you guessed it, you can start a block 
+on the following lines. 
+
+now you can write your properties and methods. 
+
+to define a method inside of a class, it's almost like writing a regular function.
+however, inside of the parenthesis, where you put your parameters, you'll /always need 
+to make a first parameter called self, just like this
+
+[bullet]
+
+[
+
+def say_something(self):
+    # then you can write code here
+
+
+]
+
+after that you can write code inside, like normal. i'll place a print for demonstration.
+ 
+
+
+after the class is defined, you can make an object by calling the class like a function.
+except, we call this instantiating instead of calling, because it makes a //new instance// of the class.
+
+(the words instance and object are both interchangeable)
+
+every time you instantiate a class, it creates a unique object. 
+
+however, if you don't store the object, it doesn't really do anything.
+sort of like just writing the number 7. you'll probably want to store the object in a variable
+to work with it. 
+
+now we can call that method on the object. 
+
+if i say dog1 dot say something, and then run this program, you can see that the code inside of the 
+method ran. cool. 
+
+let's go back to the class. 
+
+
+there's one special method that you should have in pretty much all of your classes.
+it's called the init method - short for initialize. 
+
+[bullet]
+
+you write it like this. two underscores before and after the word init, and then again with the self
+parameter. the init function is special because it runs when you first instantiate an object. 
+
+let's try it out with a new print statement. 
+
+def __init__(self):
+    print('a dog was made!')
+
+
+simply making a dog object ran the print. 
+
+we didn't call the init function, it ran when we created the object.
+
+if i make a second dog object, we get two prints. 
+
+
+okay so how do you normally use the init function?
+and what's up with this self parameter?
+
+they kind of go together. 
+
+self is like a placeholder for the object itself. 
+
+in the block, if i say self.name = 'code dog', i'm saying 
+take the object, give it a property called name, and set that to a 
+string 'code dog'. 
+
+
+[
+
+def __init__(self):
+    self.name = 'code dog'
+
+]
+
+
+now, i can take an instance, and retrieve the property name. 
+
+let's print dog1.name
+
+this is how we add properties to objects. 
+
+right now every single dog object will have the same name 'code dog',
+but we want to be able to set the name for each dog we make. 
+
+this is where the init comes in handy. if you add extra parameters after 'self',
+you can set data when you go to create an object. 
+
+let's add the parameter 'name' and then set self.name equal to the given name. 
+
+now when we instantiate a new dog, we give it a name in the parenthesis. 
+
+let's name one dog 'buddy' and one dog 'scooby' and then print those properties 
+to see that they're different. 
+
+cool! now we have two objects, one property, but the two values they hold are different. 
+
+let's repeat this pattern to also hold an age, and color property, 
+and i'll also add a tricks property but set that to an empty list. 
+
+i'll use that in a minute
+
+now when we create dog objects, we have to specify the name, age, and color.
+
+so we've achieved the first use of objects: to group values together
+
+now let's write some methods that deal with behavior related to those values.
+
+i'm gonna change this say_something method to print something different. 
+in fact, if you look at this method, it doesn't do anything with the 'self' parameter
+so it doesn't touch the dog object at all. if you think about it,
+this function is unrelated to the dog class, so if you have a method in a 
+class that is unrelated to the object, it's best to move it outside the class. 
+
+now it's an method called introduce that prints out the dog's information.
+and all of the tricks it knows. notice how whenever i want to access the objects
+properties, i have to use the self parameter dot the property. 
+
+let's introduce these two dogs.
+
+everything is working as expected. lastly, let's make one more function so 
+our dogs can learn tricks. 
+
+i do this by appending a trick, passed through the method, into the tricks 
+property inside of the dog object. now each dog can learn tricks independent of each other. 
+nice!
+
+let's teach buddy how to speak and sit, and scooby how to shake and roll over. 
+
+then, let's look at their introductions. 
+
+
+awesome! 
+
+so now you know how to create classes, objects from classes,
+methods, properties, the init method, and the self parameter. 
+
+it's a lot to learn, so take your time exploring how objects work.
+
+in the next video, we're going to tie in a bit of object oriented programming 
+and learn how we can make objects interact. 
+
+stay tuned. 
+
+code dog out. 
+
+
+
+
+
+
+/*
+
+let's see what happens when you try to print a plain object. 
+
+print(x) 
+
+in the terminal, we get Dog object at and then a weird code. this is the location in memory. 
+if i create a second object, and then print that one out, it prints out a different location.
+the two objects are independent of each other, and 
+but if i make a 
+
+*/
+
+
+
+
+-quick review
+-classes are object templates
+-how to make a class
+    -how to name a class
+-how to create a method in a class
+-how to instantiate an object
+    -what is an instance?
+-writing the init method
+-what is self?
+-instance variables + passing thru init
+
+
+
+ mention:
+ -a method of an object should relate to that object. if not,
+ then it shouldn't be inside of the class.
+
+ yup
+
+
+ -object is called an instance
+
+ yup
+
+ -creating an object is called instantiation 
+
+ yup 
+
+-copying objects are like lists, they are reference types
+
+oops
+
+-dont forget bullets!!!

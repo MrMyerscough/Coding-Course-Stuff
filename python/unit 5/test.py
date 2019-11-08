@@ -1,17 +1,15 @@
-library = [
-    'To Kill a Mockingbird', 
-    'The Catcher in the Rye', 
-    'The Great Gatsby',
-    'Gone with the Wind'
-]
+class Dog:
+    def say_something(self):
+        print('aHHH')
 
-print('Welcome to the library!')
 
-print('Selection: ')
+x = Dog() 
 
-for book in library:
-    print(f'{library.index(book)} - {book}')
+x.say_something()
 
-choice = input('Pick out a book: ')
 
-def thing()
+# you can mention that printing an object shows its location in memory,
+# but also thats not 
+print(x) 
+
+

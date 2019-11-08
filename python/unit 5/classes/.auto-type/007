@@ -1,0 +1,5 @@
+file: classes.py
+line: 3
+col: 9
+---
+print()←'hello'→ 

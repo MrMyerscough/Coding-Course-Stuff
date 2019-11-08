@@ -1,0 +1,9 @@
+file: classes.py
+line: 19
+---
+
+
+↑dog1.learn_trick('speak')
+dog1.learn_trick('sit')
+dog2.learn_trick('shake')
+dog2.learn_trick('roll over')
