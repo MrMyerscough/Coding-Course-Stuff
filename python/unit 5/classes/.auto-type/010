@@ -1,0 +1,7 @@
+file: classes.py
+line: 5
+col: 14
+---
+
+
+dog1.say_something() 

@@ -1,0 +1,8 @@
+file: classes.py
+line: 8
+col: 22
+---
+⌫⌫⌫⌫⌫⌫⌫⌫⌫⌫⌫⌫⌫introduce⇥↓←←←⌫⌫⌫⌫⌫⌫⌫f''←Hello! My name is {self.name}. I am {self.age} years old. My fur is {self.color}.⇥
+        print(f'I know {len(self.tricks)} trick(s):')
+        for trick in self.tricks:
+            print(trick)

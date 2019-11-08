@@ -1,0 +1,147 @@
+-procedural vs object oriented programming
+
+-encapsulation
+-abstraction
+-inheritance
+-polymorphism 
+
+
+procedural 
+    -functions connected and values all over the place
+    -things are super easy to break
+        -one change has many things that depend on it
+    -spaghetti code
+
+objects 
+    -properties (attributes)
+    -methods (actions / behaviors)
+    -in UNITS
+    -encapsulation 
+
+example of procedural
+    -values + functions - related
+    -when we group them, fewer parameters 
+    -you define actions, and don't worry about how they work! 
+        -called abstraction
+
+
+inheritance
+    -a blueprint object, then a specific type
+    -removes the need for repeated code!
+
+
+how do we make objects? 
+    classes!
+
+
+
+
+we've learned basic commands, the types of values, and different instructions,
+like loops and conditionals. 
+
+then we learned how to create our own commands with functions. 
+
+so what comes next?
+
+now we're going to learn about objects - such a powerful tool in programming,
+there's an entire practice based around them. 
+
+it's called object oriented programming, or OOP.
+
+let's look at how it works, but first, let's look at what's wrong with the programs 
+we're making so far.
+
+
+let's say you want to make a program that simulates a library. 
+-you have lists with the books, their authors, and other information like number of pages 
+-then you have some functions that operate on those values. 
+- maybe one that prints out all of the names of the books,
+one that prints out the full information for a book,
+one that let's a user check out a book, and so on.
+
+[
+
+visuals:
+
+-lists
+-each function (parameters too)
+-connections
+
+]
+
+the problem is there's no real structure. 
+
+all of these variables aren't grouped in anyway that makes sense.
+you have to use corresponding lists, which can get annoying.
+the functions can also get confusing. maybe one takes in parameters,
+maybe it changes the original list, and if you change one function, 
+another one using it could break !
+
+this type of programming is called procedural programming - doing things
+in sections of steps, called procedures. 
+for small sets of instructions, there's no problem. 
+but as soon as you go to make bigger programs with lots of values and
+functions, it can become all mixed up. 
+
+in the programming world we call that spaghetti code, because it's 
+a mess of scrambled values, functions, and instructions.
+
+[
+pic 
+-vars, 
+-inputs
+-loops
+-functions
+-prints 
+]
+
+
+so what are objects? and how does object oriented programming solve these problems? 
+
+simplifying things down, an object is just a unit of values and related functions.
+x, y, and z could be strings, numbers, booleans, lists, or any other values.
+the functions make and do might print those values or do some calculations with them.
+
+we call the values properties and the functions methods. 
+
+let's look at an example. 
+
+in the library program, you'd probably want to write Book objects
+that store the name of the book, the author, and the length. 
+then it would have functions related to those values inside of it,
+such as a print_info method. 
+
+but when you define objects in python, you're just creating the blueprint for book objects. 
+from that blueprint, you create instances, or variations.
+
+a book object instance would hold values, such as 'harry potter' and 
+'J.K. Rowling'
+
+in your code, you could then access the properties like book1.author, 
+or call book1.print_info()
+
+on top of that, you can make objects interact.
+
+after you create book objects, you'd want to write a library object.
+inside it would probably have a property with a list of books, and a list of checked 
+out books. 
+and methods for displaying and checking out books. 
+
+
+the same way, you could say library.check_out(book1) in your code,
+which is simple and easy to understand. 
+
+
+
+that's the basics of object oriented programming. 
+it's a structured practice to creating programs, 
+where you group values and functions together, and then make them interact.
+and that's just the beginning. there's even more advanced things you can do with them,
+but don't worry about that just yet. 
+
+in the next video, we're going to learn how to create our own objects with classes. 
+
+that's all for now. 
+
+code dog out. 
+ 

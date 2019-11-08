@@ -1,0 +1,7 @@
+file: classes.py
+line: 1
+col: 11
+---
+
+
+↑    def __init__():←←self→→

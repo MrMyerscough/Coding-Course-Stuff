@@ -1,0 +1,4 @@
+file: classes.py
+line: 10
+---
+dog2 = Dog() 
