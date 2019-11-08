@@ -8,19 +8,19 @@ a module in python is just a file with python definitions and statements, so we'
 been writing them all along!
 
 to create a new module, make a python file like normal. the module name is the same as
-the file name, excluding the .py extension. 
+the file name, except without the .py extension. 
 
 i'll paste some functions i've already written in here. you can also store variables 
 in modules to use them in other programs. 
 
-now, these functions are just helpers that will allow me to complete my main program.
+now, these functions are just helpers or tools that will allow me to complete my main program.
 
 a good way to think of it is to store your main code and helper code separately. 
 your main code solves your bigger, main problem or task, and the helper functions 
 complete the smaller tasks that make up the big one. 
 
 you should also group similar functions together in a module, so you might have one module 
-for math functions, one for lists, and one for strings.
+for math functions, one for lists, and one for strings, or however you want to arrange them.
 
 you'll learn more about how to properly structure your code as you keep moving forward, 
 but try to keep these tips in mind when creating new programs. 
@@ -53,3 +53,26 @@ make things a lot easier to reuse your code too.
 that's all for now.
 
 code dog out.
+
+
+
+import math
+
+tau = 2 * math.pi
+
+def pythagorean(a, b):
+    """Return the hypotenuse of a right triangle with sides a and b."""
+    c_sq = a ** 2 + b ** 2
+    c = c_sq ** 0.5
+    return c
+
+def law_of_cosines(a, b, angle_c):
+    """Return the missing side c in a trangle given sides a and b and angle_c (degrees)."""
+    c_sq = a ** 2 + b ** 2 - 2 * a * b * math.cos(math.radians(angle_c))
+    c = c_sq ** 0.5
+    return c
+
+def area_of_a_sector(r, theta):
+    """Return the area of a sector with a radius r over the angle theta."""
+    a = 0.5 * r ** 2 * math.radians(theta)
+    return a
