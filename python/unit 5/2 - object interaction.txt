@@ -1,0 +1,161 @@
+-class vs instance variables
+-docstrings
+
+-objects
+-magic methods
+-create print, str, >, <, =, !=, etc. 
+-a managing / container object / class
+
+
+
+welcome back. today we're learning about some practical ways to use objects.
+last time we looked at how to create basic objects, which meant setting properties
+and methods. now, we're going to make objects interact so we can make structured 
+programs. programs with interacting objects can do complex actions in a way 
+that's easy to understand.
+
+let's start with the dog class we created last time.
+
+let's say I want to take this program further. I want to create an animal shelter
+where you can adopt dogs and drop off any dogs you find on the street. 
+
+so what would be an easy way of doing that?
+
+one good answer is to use another object! 
+
+in programming, we can create objects that have more objects inside of them!
+one can hold and manage many others.
+
+an animal shelter object makes perfect sense to hold dogs. 
+
+okay, underneath the dog class, i'll start writing a new class called 
+animal shelter. 
+
+the only property it will have will be a list of dogs. 
+
+i can define that property in the initialize method. i set it to be 
+an empty list, so the shelter will start out with no dogs.
+
+let's create a method that adds a dog to the list.
+
+this will take in a dog object and append it to the dogs property.
+notice how it is designed to take in a dog object that's already made.
+if you want to add a dog to the shelter, you'll first have to create
+the dog object separately, with a name age and color. 
+
+let's keep that in mind for later.
+
+we'll also need a method of adopting dogs. this one is a little 
+more tricky. we /could/ give a dog object, and then .remove 
+the item from the list, but how would we get that object in the 
+first place? we'd have to write another method that gets one 
+dog out of the list, and then pass that value into the adopt 
+method. let's just simplify this into one step. 
+
+instead of an object, let's supply a name, and then remove
+the dog with that name. 
+
+to do that, we'll need a for loop over every dog in the list. 
+with an if-statement we can check if the name matches. 
+if it does match, we remove the dog, then print a thank 
+you, and lastly return so the method stops. 
+
+if the loop came to an end, that means the return never ran,
+and no dog matched in the list had that name. 
+we can print 'could not find a dog with that name'.
+
+for the last method in this animal shelter class, let's call the 
+introduce command on every dog so people can come in, meet them,
+and adopt them. 
+
+this one is easy. print how many dogs there are, with the length
+command, and then use a for-loop to call the method on every dog.
+
+last thing, i'll add docstrings to every method to describe what they 
+do and what data they require. 
+
+you can also add a docstring to classes themselves, so when you hover 
+over the object instantiation, it shows what the class is used for. 
+just put the docstring right after at the beginning of the class block.
+For this class, I can say something as simple as 'holds found dogs for adoption'
+
+cool ! now we have the tools we need to create a really great program.
+
+When making a big program, i prefer to store my classes in a separate module.
+i'll move them to a file called dogs.
+
+
+//maybe remove
+by all means, you don't have to do this in your own programs. I just like
+to break up big parts of my code into different files, so I can reuse 
+them easily. 
+
+in the main file, i can then import them to use them. 
+
+now we can write program code using the classes we just defined.
+
+first, i'll make an animal shelter object stored in the variable pound.
+
+then i'll make a menu for the users to pick what to do. we learned how 
+to do this in unit 3.
+
+the four options in the program will be to view the dogs, adopt one,
+drop one off, and to quit. 
+
+i'll take input and then use another if-statement to run the right
+code. 
+
+if the user chooses to view all dogs, that's easy. just call pound dot
+introduce all dogs.
+
+if they choose to adopt, we need to ask for the name, and then call
+pound dot adopt dog given the name. 
+makes perfect sense. 
+
+to drop off a dog, we need to first create a dog object, because that's 
+what the method takes in, remember? 
+to do that, I'll ask for a name, age, and color, and then create a new 
+dog. Finally, I can call pound.adopt_dog given the dog we just created.
+
+and, believe it or not, we just created an entire animal shelter program!
+using objects, we could fit the entire program code in less than 30 lines!
+wow! imagine how much effort that would take if we didn't use objects. 
+
+let's test it out.
+
+obviously, if i choose to meet all of the dogs, there should be zero because 
+we just stared the program. 
+
+so let's add one. I'll name it molly. 
+
+now when we go to view all of them, we can see her here. 
+
+let's add a second dog. I'll call it spot. 
+
+again, it shows up in the list like we expect. 
+
+now let's get molly out of there. 
+
+if i adopt, it asks for the name, and prints out the thank you.
+
+again, molly is gone from the shelter and therefor gone from the list.
+
+cool ! 
+
+hopefully you can start to see the value of objects. once you get the hang of them,
+they can be exactly what you need to make awesome programs. 
+
+this example was basic, and only had three functions. can you think of 
+how you could add an option to teach dogs tricks? how about adding 
+cats to the animal shelter? 
+
+it's all possible with objects. in this program alone, we used every 
+big concept we've learned so far. commands, operators, conditionals, lists,
+loops, functions, and wrapped it all together with objects. 
+
+in the next unit, we're going to dive into graphics, and start making programs 
+with shapes, colors, animations, and more. 
+
+stick around. 
+
+code dog out. 
