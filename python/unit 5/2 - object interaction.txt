@@ -61,7 +61,7 @@ if it does match, we remove the dog, then print a thank
 you, and lastly return so the method stops. 
 
 if the loop came to an end, that means the return never ran,
-and no dog matched in the list had that name. 
+and no dog in the list had that name. 
 we can print 'could not find a dog with that name'.
 
 for the last method in this animal shelter class, let's call the 
@@ -76,7 +76,7 @@ do and what data they require.
 
 you can also add a docstring to classes themselves, so when you hover 
 over the object instantiation, it shows what the class is used for. 
-just put the docstring right after at the beginning of the class block.
+just put the docstring right at the beginning of the class block.
 For this class, I can say something as simple as 'holds found dogs for adoption'
 
 cool ! now we have the tools we need to create a really great program.
