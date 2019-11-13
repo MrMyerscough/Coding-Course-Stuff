@@ -20,7 +20,7 @@ more on this in a minute.
 to create a class, type the keyword 'class' and then the name you want to call it.
 the convention for naming classes is different than variables and functions. Start with a capital letter,
 and instead of underscores, capitalize the first letter of the next word. like this.
-that's usually called Camel Case. 
+that's usually called Pascal Case. 
 
 [bullet]
 

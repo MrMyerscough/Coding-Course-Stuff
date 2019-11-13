@@ -10,7 +10,13 @@
 
 welcome back. today we're learning about some practical ways to use objects.
 last time we looked at how to create basic objects, which meant setting properties
-and methods. now, we're going to make objects interact so we can make structured 
+and methods. 
+
+now we're going to use those objects in an object-oriented program.
+using object orinted programming let's us do complex actions in a way
+that's easy to understand. 
+
+now, we're going to make objects interact so we can make structured 
 programs. programs with interacting objects can do complex actions in a way 
 that's easy to understand.
 
