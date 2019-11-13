@@ -1,0 +1,8 @@
+file: object interaction.py
+line: 15
+col: 35
+---
+
+
+class AnimalShelter:
+    

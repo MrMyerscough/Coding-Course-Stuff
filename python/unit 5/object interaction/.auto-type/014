@@ -1,0 +1,15 @@
+file: object interaction.py
+line: 41
+col: 20
+---
+
+
+
+test = AnimalShelter() 
+
+dog1 = Dog()←'bean', 3, 'brown'→
+
+dog2 = Dog()←'ocean', 5, 'white and grey'→
+
+dog3 = Dog()←'luna', 7, 'red'→ 
+

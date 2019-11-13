@@ -81,6 +81,28 @@ For this class, I can say something as simple as 'holds found dogs for adoption'
 
 cool ! now we have the tools we need to create a really great program.
 
+first, let's test out what we have written before moving on.
+
+i'll create an animal shelter object, then create three dog objects. 
+i'll add these dogs to the shelter with the add dog command.
+
+we should be able to see them by introducing all of them.
+
+then let's remove two of them, given their names.
+oh and why don't we see if it does the correct thing when we give a name that 
+doesn't exist in the shelter.
+
+and we can check that they were successfully adopted if they don't show up in 
+the introduction method. so let's call that again.
+
+if i run this and check the output, everything looks like it works so far. 
+it printed all three dogs, adopted luna and bean, couldn't find code dog,
+and then introduced ocean. 
+
+nice.
+
+now we can start making the main logic of the program. 
+
 When making a big program, i prefer to store my classes in a separate module.
 i'll move them to a file called dogs.
 
@@ -118,7 +140,7 @@ to do that, I'll ask for a name, age, and color, and then create a new
 dog. Finally, I can call pound.adopt_dog given the dog we just created.
 
 and, believe it or not, we just created an entire animal shelter program!
-using objects, we could fit the entire program code in less than 30 lines!
+using objects, we could fit the entire program code in less than 40 lines!
 wow! imagine how much effort that would take if we didn't use objects. 
 
 let's test it out.
@@ -138,7 +160,7 @@ now let's get molly out of there.
 
 if i adopt, it asks for the name, and prints out the thank you.
 
-again, molly is gone from the shelter and therefor gone from the list.
+again, molly is gone from the shelter and therefore gone from the list.
 
 cool ! 
 

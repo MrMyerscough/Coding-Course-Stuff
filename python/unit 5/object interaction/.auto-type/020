@@ -1,0 +1,25 @@
+file: object interaction.py
+line: 5
+col: 1
+---
+done = False
+
+print('Welcome to the animal shelter!')
+
+while not done:
+    print('1 - view dogs')
+    print('2 - adopt a dog')
+    print('3 - drop off a found dog')
+    print('4 - exit')
+    choice = input('Choose an option: ')
+
+    if choice == '1':
+
+    elif choice == '2':
+
+    elif choice == '3':
+
+    elif choice == '4':
+        done = True
+    else:
+        print('Not a valid option.')

@@ -1,0 +1,7 @@
+file: object interaction.py
+line: 20
+col: 9
+---
+# adopt a dog
+        name = input('Which dog would you like to adopt? (name) ')
+        pound.adopt_dog(name)

@@ -1,0 +1,9 @@
+file: object interaction.py
+line: 58
+col: 1
+---
+test.adopt_dog('luna')
+test.adopt_dog('bean')
+
+test.adopt_dog('code dog')
+

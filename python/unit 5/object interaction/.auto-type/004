@@ -1,0 +1,4 @@
+file: object interaction.py
+line: 24
+---
+    def adopt_dog(self):←←

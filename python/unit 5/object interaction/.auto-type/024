@@ -1,0 +1,9 @@
+file: object interaction.py
+line: 25
+col: 9
+---
+name = input("what is the dog's name?")
+        age = int(input("what is the dog's age?"))
+        color = input("what is the dog's color?")
+        dog = Dog(name, age, color)
+        

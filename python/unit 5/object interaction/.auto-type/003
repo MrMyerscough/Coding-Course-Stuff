@@ -1,0 +1,7 @@
+file: object interaction.py
+line: 20
+---
+
+    def add_dog(self, dog):
+        self.dogs.append(dog)
+

@@ -1,0 +1,6 @@
+file: object interaction.py
+line: 17
+col: 1
+---
+        # view dogs
+        pound.introduce_all_dogs() ↓↓        

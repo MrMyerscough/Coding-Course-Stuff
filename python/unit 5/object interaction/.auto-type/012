@@ -1,0 +1,8 @@
+file: object interaction.py
+line: 36
+col: 20
+---
+↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑⇥
+        """"""←←←Add dog to animal shelter.↓↓↓⇥
+        """"""←←←Removes dog from animal shelter given name, if dog exists in shelter.↓↓↓↓↓↓↓↓⇥
+        """"""←←←Print a description for all dogs.

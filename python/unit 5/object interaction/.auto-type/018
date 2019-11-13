@@ -1,0 +1,4 @@
+file: object interaction.py
+---
+from dogs import Dog, AnimalShelter 
+

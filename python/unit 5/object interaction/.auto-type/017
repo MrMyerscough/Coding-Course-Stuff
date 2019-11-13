@@ -1,0 +1,5 @@
+file: object interaction.py
+line: 63
+col: 1
+---
+test.introduce_all_dogs() 

@@ -1,0 +1,6 @@
+file: object interaction.py
+line: 3
+col: 1
+---
+pound = AnimalShelter()
+

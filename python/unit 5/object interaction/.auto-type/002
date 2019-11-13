@@ -1,0 +1,6 @@
+file: object interaction.py
+line: 18
+col: 5
+---
+def __init__(self):
+        self.dogs = []

@@ -1,0 +1,10 @@
+file: object interaction.py
+line: 52
+col: 1
+---
+test.add_dog()←dog1→
+test.add_dog()←dog2→
+test.add_dog()←dog3→
+
+test.introduce_all_dogs()
+

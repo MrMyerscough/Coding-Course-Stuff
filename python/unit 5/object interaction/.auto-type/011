@@ -1,0 +1,8 @@
+file: object interaction.py
+line: 33
+col: 9
+---
+print(f'There are {len(self.dogs)} animals in this shelter:')
+        for dog in self.dogs:
+            dog.introduce()
+            print()

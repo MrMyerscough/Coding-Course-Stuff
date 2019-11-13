@@ -1,0 +1,9 @@
+file: object interaction.py
+line: 25
+col: 9
+---
+for dog in self.dogs:
+            if dog.name == name:
+                self.dogs.remove(dog)
+                print(f'Thank you for adopting {name}!\n')
+                return
