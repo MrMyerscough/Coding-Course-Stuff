@@ -45,7 +45,6 @@ an empty list, so the shelter will start out with no dogs.
 let's create a method that adds a dog to the list.
 
 this will take in a dog object and append it to the dogs property.
-notice how it is designed to take in a dog object that's already made.
 if you want to add a dog to the shelter, you'll first have to create
 the dog object separately, with a name age and color. 
 
@@ -143,7 +142,7 @@ makes perfect sense.
 to drop off a dog, we need to first create a dog object, because that's 
 what the method takes in, remember? 
 to do that, I'll ask for a name, age, and color, and then create a new 
-dog. Finally, I can call pound.adopt_dog given the dog we just created.
+dog. Finally, I can call pound.add_dog given the dog we just created.
 
 and, believe it or not, we just created an entire animal shelter program!
 using objects, we could fit the entire program code in less than 40 lines!
